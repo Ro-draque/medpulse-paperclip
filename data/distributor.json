@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "as_of": "2026-11-08",
+  "currency": "ARS",
+  "stock_as_of": "2026-11-08",
+  "note": "Todas las entidades, precios, stock y consentimientos son ficticios. No son cotizaciones reales.",
+  "customers": [
+    {
+      "id": "C01",
+      "name": "Clínica Horizonte Demo",
+      "segment": "Clínica",
+      "contact": "Ana Demo",
+      "recipient_ref": "FICTITIOUS-C01",
+      "email": "c01@example.invalid",
+      "consent": {
+        "valid": true,
+        "date": "2026-07-01",
+        "source": "Registro sintético de opt-in B2B"
+      }
+    },
+    {
+      "id": "C02",
+      "name": "Consultorios del Parque Demo",
+      "segment": "Consultorio",
+      "contact": "Luis Demo",
+      "recipient_ref": "FICTITIOUS-C02",
+      "email": "c02@example.invalid",
+      "consent": {
+        "valid": true,
+        "date": "2026-07-01",
+        "source": "Registro sintético de opt-in B2B"
+      }
+    },
+    {
+      "id": "C03",
+      "name": "Centro Asistencial Sur Demo",
+      "segment": "Centro médico",
+      "contact": "Eva Demo",
+      "recipient_ref": "FICTITIOUS-C03",
+      "email": "c03@example.invalid",
+      "consent": {
+        "valid": false,
+        "date": null,
+        "source": "No otorgado"
+      }
+    },
+    {
+      "id": "C04",
+      "name": "Laboratorio Río Demo",
+      "segment": "Laboratorio",
+      "contact": "Pablo Demo",
+      "recipient_ref": "FICTITIOUS-C04",
+      "email": "c04@example.invalid",
+      "consent": {
+        "valid": true,
+        "date": "2026-07-01",
+        "source": "Registro sintético de opt-in B2B"
+      }
+    },
+    {
+      "id": "C05",
+      "name": "Residencia Los Tilos Demo",
+      "segment": "Residencia",
+      "contact": "Marta Demo",
+      "recipient_ref": "FICTITIOUS-C05",
+      "email": "c05@example.invalid",
+      "consent": {
+        "valid": true,
+        "date": "2026-07-01",
+        "source": "Registro sintético de opt-in B2B"
+      }
+    },
+    {
+      "id": "C06",
+      "name": "Centro Médico Norte Demo",
+      "segment": "Centro médico",
+      "contact": "Lucía Demo",
+      "recipient_ref": "FICTITIOUS-C06",
+      "email": "c06@example.invalid",
+      "consent": {
+        "valid": false,
+        "date": null,
+        "source": "No otorgado"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "P01",
+      "name": "Guantes de nitrilo, caja x100",
+      "category": "Protección",
+      "unit": "caja",
+      "price_ars": 8500,
+      "stock": 120,
+      "complements": [
+        "P02"
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "Gasas estériles, paquete x100",
+      "category": "Curación",
+      "unit": "paquete",
+      "price_ars": 6200,
+      "stock": 150,
+      "complements": []
+    },
+    {
+      "id": "P03",
+      "name": "Jeringas descartables 5 ml, caja x100",
+      "category": "Descartables",
+      "unit": "caja",
+      "price_ars": 12500,
+      "stock": 0,
+      "complements": []
+    },
+    {
+      "id": "P04",
+      "name": "Barbijos tricapa, caja x50",
+      "category": "Protección",
+      "unit": "caja",
+      "price_ars": 4200,
+      "stock": 80,
+      "complements": []
+    }
+  ],
+  "purchases": [
+    {
+      "id": "ORD-001",
+      "customer_id": "C01",
+      "product_id": "P01",
+      "date": "2026-07-22",
+      "quantity": 10,
+      "unit_price_ars": 8500
+    },
+    {
+      "id": "ORD-002",
+      "customer_id": "C01",
+      "product_id": "P01",
+      "date": "2026-08-21",
+      "quantity": 10,
+      "unit_price_ars": 8500
+    },
+    {
+      "id": "ORD-003",
+      "customer_id": "C01",
+      "product_id": "P01",
+      "date": "2026-09-20",
+      "quantity": 12,
+      "unit_price_ars": 8500
+    },
+    {
+      "id": "ORD-004",
+      "customer_id": "C02",
+      "product_id": "P02",
+      "date": "2026-08-26",
+      "quantity": 6,
+      "unit_price_ars": 6200
+    },
+    {
+      "id": "ORD-005",
+      "customer_id": "C02",
+      "product_id": "P02",
+      "date": "2026-09-25",
+      "quantity": 6,
+      "unit_price_ars": 6200
+    },
+    {
+      "id": "ORD-006",
+      "customer_id": "C02",
+      "product_id": "P02",
+      "date": "2026-10-25",
+      "quantity": 6,
+      "unit_price_ars": 6200
+    },
+    {
+      "id": "ORD-007",
+      "customer_id": "C03",
+      "product_id": "P01",
+      "date": "2026-08-02",
+      "quantity": 8,
+      "unit_price_ars": 8500
+    },
+    {
+      "id": "ORD-008",
+      "customer_id": "C03",
+      "product_id": "P01",
+      "date": "2026-09-01",
+      "quantity": 8,
+      "unit_price_ars": 8500
+    },
+    {
+      "id": "ORD-009",
+      "customer_id": "C04",
+      "product_id": "P03",
+      "date": "2026-08-16",
+      "quantity": 4,
+      "unit_price_ars": 12500
+    },
+    {
+      "id": "ORD-010",
+      "customer_id": "C04",
+      "product_id": "P03",
+      "date": "2026-09-15",
+      "quantity": 4,
+      "unit_price_ars": 12500
+    },
+    {
+      "id": "ORD-011",
+      "customer_id": "C05",
+      "product_id": "P01",
+      "date": "2026-09-10",
+      "quantity": 5,
+      "unit_price_ars": 8500
+    },
+    {
+      "id": "ORD-012",
+      "customer_id": "C05",
+      "product_id": "P01",
+      "date": "2026-10-10",
+      "quantity": 5,
+      "unit_price_ars": 8500
+    },
+    {
+      "id": "ORD-013",
+      "customer_id": "C05",
+      "product_id": "P04",
+      "date": "2026-10-10",
+      "quantity": 3,
+      "unit_price_ars": 4200
+    }
+  ]
+}

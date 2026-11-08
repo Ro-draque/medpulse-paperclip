@@ -1,0 +1,4 @@
+{
+  "directories": ["dashboard", "agents", "data", "docs", "runtime", ".github"],
+  "files": [".gitignore", ".vercelignore", "README.md", "DECISIONS.md", "package.json", "vercel.json", "release-files.json", "scripts/growth-core.mjs", "scripts/growth-core.test.mjs", "scripts/generate-growth-data.mjs", "scripts/growth-worker.mjs", "scripts/review-support.mjs", "scripts/review-support.test.mjs", "scripts/start-growth.mjs", "scripts/check-growth.mjs", "scripts/verify-growth.mjs", "scripts/register-growth-review.mjs", "scripts/whatsapp-dry-run-worker.mjs", "scripts/start-handoff.mjs", "scripts/link-handoff.mjs", "scripts/export-dashboard.mjs", "scripts/build-dashboard.mjs", "scripts/preview-dashboard.mjs", "scripts/delivery.test.mjs", "scripts/install-paperclip.ps1", "scripts/paperclip.ps1", "scripts/reproduce.mjs", "scripts/audit-release.mjs"]
+}

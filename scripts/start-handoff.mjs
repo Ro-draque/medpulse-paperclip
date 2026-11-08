@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';
+const m=JSON.parse(await fs.readFile('evidence/latest-growth.json','utf8'));
+const r=await fetch(`http://127.0.0.1:3100/api/companies/${m.companyId}/issues`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({title:`WhatsApp dry-run: ejecutar y registrar handoff de ${m.tasks.outreach.identifier}`,description:JSON.stringify({kind:'medpulse-whatsapp-dry-run-v1',batch:m.batch,sourceTaskId:m.tasks.outreach.id}),status:'todo',priority:'high',assigneeAgentId:m.agents.outreach})});const task=await r.json();if(!r.ok)throw Error(JSON.stringify(task));console.log(JSON.stringify({taskId:task.id,identifier:task.identifier,sourceTask:m.tasks.outreach.identifier}));

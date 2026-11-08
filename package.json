@@ -1,0 +1,14 @@
+{
+  "name": "medpulse-growth-company",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=24.11.0"},
+  "scripts": {
+    "build": "node scripts/build-dashboard.mjs",
+    "preview": "node scripts/preview-dashboard.mjs",
+    "test": "node --test scripts/growth-core.test.mjs scripts/review-support.test.mjs scripts/delivery.test.mjs",
+    "export:evidence": "node scripts/export-dashboard.mjs",
+    "audit:release": "node scripts/audit-release.mjs"
+  }
+}

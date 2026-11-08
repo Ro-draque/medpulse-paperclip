@@ -1,0 +1,7 @@
+allowBuilds:
+  '@embedded-postgres/windows-x64': true
+  '@paperclipai/server': true
+  cpu-features: false
+  opencode-ai: false
+  protobufjs: false
+  ssh2: false

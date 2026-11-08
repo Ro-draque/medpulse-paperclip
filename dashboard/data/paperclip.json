@@ -1,0 +1,416 @@
+{
+  "schema": "medpulse.public-evidence.v1",
+  "exportedAt": "2026-11-08T23:22:59.052Z",
+  "source": {
+    "system": "Paperclip",
+    "version": "2026.1106.0",
+    "batch": "1954772e-c5e0-42af-863e-c29ff2990689",
+    "mode": "read_only_snapshot",
+    "live": false
+  },
+  "dataKind": {
+    "execution": "real",
+    "commercial": "synthetic",
+    "asOf": "2026-11-08",
+    "externalMarketSource": false
+  },
+  "agents": [
+    {
+      "id": "25d21761-944f-4f5f-a2c4-e433d551d4c1",
+      "name": "Growth Director",
+      "title": "Growth Director",
+      "adapter": "process",
+      "reportsTo": null,
+      "status": "idle"
+    },
+    {
+      "id": "fe1b982f-03a6-4108-8898-d4c8b132eed7",
+      "name": "Sales Intelligence",
+      "title": "Sales Intelligence",
+      "adapter": "process",
+      "reportsTo": "25d21761-944f-4f5f-a2c4-e433d551d4c1",
+      "status": "idle"
+    },
+    {
+      "id": "7fc30224-05f9-47ce-8a28-33309092dec8",
+      "name": "Campaign Strategist",
+      "title": "Campaign Strategist",
+      "adapter": "process",
+      "reportsTo": "25d21761-944f-4f5f-a2c4-e433d551d4c1",
+      "status": "idle"
+    },
+    {
+      "id": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+      "name": "Outreach Operator",
+      "title": "Outreach Operator",
+      "adapter": "process",
+      "reportsTo": "25d21761-944f-4f5f-a2c4-e433d551d4c1",
+      "status": "idle"
+    }
+  ],
+  "tasks": [
+    {
+      "stage": "director",
+      "id": "2a6407e6-e312-4e00-8d7d-c02f9efaef4d",
+      "identifier": "MED-3",
+      "title": "MEDPULSE director · 1954772e",
+      "status": "done",
+      "assigneeAgentId": "25d21761-944f-4f5f-a2c4-e433d551d4c1",
+      "humanAssigned": false,
+      "completedAt": "2026-11-08T21:53:52.631Z",
+      "sourceTaskIds": [],
+      "approval": null
+    },
+    {
+      "stage": "sales",
+      "id": "1217fa70-013a-4685-8c75-b841f9bb803c",
+      "identifier": "MED-4",
+      "title": "MEDPULSE sales · 1954772e",
+      "status": "done",
+      "assigneeAgentId": "fe1b982f-03a6-4108-8898-d4c8b132eed7",
+      "humanAssigned": false,
+      "completedAt": "2026-11-08T21:54:26.747Z",
+      "sourceTaskIds": [
+        "2a6407e6-e312-4e00-8d7d-c02f9efaef4d"
+      ],
+      "approval": null
+    },
+    {
+      "stage": "strategy",
+      "id": "c92f7d72-9255-44fc-81b4-9f2d21847bea",
+      "identifier": "MED-5",
+      "title": "MEDPULSE strategy · 1954772e",
+      "status": "done",
+      "assigneeAgentId": "7fc30224-05f9-47ce-8a28-33309092dec8",
+      "humanAssigned": false,
+      "completedAt": "2026-11-08T21:54:50.223Z",
+      "sourceTaskIds": [
+        "1217fa70-013a-4685-8c75-b841f9bb803c"
+      ],
+      "approval": null
+    },
+    {
+      "stage": "outreach",
+      "id": "32c2756a-91fe-411d-b541-07617d45d78c",
+      "identifier": "MED-6",
+      "title": "MEDPULSE outreach · 1954772e",
+      "status": "in_review",
+      "assigneeAgentId": null,
+      "humanAssigned": true,
+      "completedAt": null,
+      "sourceTaskIds": [
+        "c92f7d72-9255-44fc-81b4-9f2d21847bea"
+      ],
+      "approval": {
+        "status": "pending",
+        "stage": "approval",
+        "lastOutcome": "changes_requested",
+        "decisionId": "1114b3b6-d9fa-4d37-a936-f46be9f191b2",
+        "humanParticipant": true
+      }
+    },
+    {
+      "stage": "handoff",
+      "id": "cbc99b0d-1942-41e3-a65b-66358022cec2",
+      "identifier": "MED-7",
+      "title": "WhatsApp dry-run: ejecutar y registrar handoff de MED-6",
+      "status": "done",
+      "assigneeAgentId": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+      "humanAssigned": false,
+      "completedAt": "2026-11-08T23:21:51.824Z",
+      "sourceTaskIds": [],
+      "approval": null
+    }
+  ],
+  "runs": [
+    {
+      "id": "9e288c1c-520f-4ebf-bdb7-a18c05b1c081",
+      "taskId": "cbc99b0d-1942-41e3-a65b-66358022cec2",
+      "agentId": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+      "status": "succeeded",
+      "startedAt": "2026-11-08T23:21:44.486Z",
+      "finishedAt": "2026-11-08T23:21:52.344Z",
+      "exitCode": 0,
+      "durationSeconds": 8,
+      "errorCode": null
+    },
+    {
+      "id": "03123e9a-20d7-4bed-9203-3f928b8de6af",
+      "taskId": "32c2756a-91fe-411d-b541-07617d45d78c",
+      "agentId": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+      "status": "succeeded",
+      "startedAt": "2026-11-08T23:15:29.811Z",
+      "finishedAt": "2026-11-08T23:15:48.805Z",
+      "exitCode": 0,
+      "durationSeconds": 19,
+      "errorCode": null
+    },
+    {
+      "id": "41bbe239-ae35-411d-bec5-30c40fa1cee5",
+      "taskId": "32c2756a-91fe-411d-b541-07617d45d78c",
+      "agentId": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+      "status": "failed",
+      "startedAt": "2026-11-08T23:01:26.657Z",
+      "finishedAt": "2026-11-08T23:01:52.987Z",
+      "exitCode": 1,
+      "durationSeconds": 26,
+      "errorCode": "adapter_failed"
+    },
+    {
+      "id": "a03ddd04-6d10-4448-9ee8-678c19d14989",
+      "taskId": "32c2756a-91fe-411d-b541-07617d45d78c",
+      "agentId": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+      "status": "succeeded",
+      "startedAt": "2026-11-08T21:54:50.618Z",
+      "finishedAt": "2026-11-08T21:55:05.510Z",
+      "exitCode": 0,
+      "durationSeconds": 15,
+      "errorCode": null
+    },
+    {
+      "id": "7ffe0128-6b66-41c6-bc9e-77ac440f95e2",
+      "taskId": "c92f7d72-9255-44fc-81b4-9f2d21847bea",
+      "agentId": "7fc30224-05f9-47ce-8a28-33309092dec8",
+      "status": "succeeded",
+      "startedAt": "2026-11-08T21:54:27.286Z",
+      "finishedAt": "2026-11-08T21:54:50.452Z",
+      "exitCode": 0,
+      "durationSeconds": 23,
+      "errorCode": null
+    },
+    {
+      "id": "860e3206-d332-469d-879e-b7e2f1354aa4",
+      "taskId": "1217fa70-013a-4685-8c75-b841f9bb803c",
+      "agentId": "fe1b982f-03a6-4108-8898-d4c8b132eed7",
+      "status": "succeeded",
+      "startedAt": "2026-11-08T21:54:00.049Z",
+      "finishedAt": "2026-11-08T21:54:27.030Z",
+      "exitCode": 0,
+      "durationSeconds": 27,
+      "errorCode": null
+    },
+    {
+      "id": "951b5f44-cef9-49b5-88ae-260f6cef2e9d",
+      "taskId": "2a6407e6-e312-4e00-8d7d-c02f9efaef4d",
+      "agentId": "25d21761-944f-4f5f-a2c4-e433d551d4c1",
+      "status": "succeeded",
+      "startedAt": "2026-11-08T21:53:31.197Z",
+      "finishedAt": "2026-11-08T21:53:52.867Z",
+      "exitCode": 0,
+      "durationSeconds": 22,
+      "errorCode": null
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "REORDER-C01-P01",
+      "type": "reorder",
+      "customer_id": "C01",
+      "product_id": "P01",
+      "quantity": 12,
+      "estimated_order_ars": 102000,
+      "evidence": {
+        "purchase_ids": [
+          "ORD-001",
+          "ORD-002",
+          "ORD-003"
+        ],
+        "last_purchase": "2026-09-20",
+        "elapsed_days": 49,
+        "median_interval_days": 30,
+        "overdue_days": 19,
+        "stock": 120,
+        "quantity": 12
+      },
+      "score": 89
+    },
+    {
+      "id": "CROSS-C01-P02",
+      "type": "cross_sell",
+      "customer_id": "C01",
+      "product_id": "P02",
+      "quantity": 1,
+      "estimated_order_ars": 6200,
+      "score": 55,
+      "evidence": {
+        "purchase_ids": [
+          "ORD-003"
+        ],
+        "complement_of": "P01",
+        "stock": 150,
+        "quantity": 1,
+        "hypothesis": "Complementariedad definida en catálogo sintético; no demuestra propensión de compra."
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "customer_id": "C02",
+      "product_id": "P02",
+      "reason": "Recompra aún no vencida",
+      "evidence": {
+        "purchase_ids": [
+          "ORD-004",
+          "ORD-005",
+          "ORD-006"
+        ],
+        "last_purchase": "2026-10-25",
+        "elapsed_days": 14,
+        "median_interval_days": 30,
+        "overdue_days": -16,
+        "stock": 150,
+        "quantity": 6
+      }
+    },
+    {
+      "customer_id": "C03",
+      "product_id": "P01",
+      "reason": "Sin consentimiento comercial",
+      "evidence": {
+        "purchase_ids": [
+          "ORD-007",
+          "ORD-008"
+        ],
+        "last_purchase": "2026-09-01",
+        "elapsed_days": 68,
+        "median_interval_days": 30,
+        "overdue_days": 38,
+        "stock": 120,
+        "quantity": 8
+      }
+    },
+    {
+      "customer_id": "C04",
+      "product_id": "P03",
+      "reason": "Stock insuficiente",
+      "evidence": {
+        "purchase_ids": [
+          "ORD-009",
+          "ORD-010"
+        ],
+        "last_purchase": "2026-09-15",
+        "elapsed_days": 54,
+        "median_interval_days": 30,
+        "overdue_days": 24,
+        "stock": 0,
+        "quantity": 4
+      }
+    },
+    {
+      "customer_id": "C05",
+      "product_id": "P01",
+      "reason": "Recompra aún no vencida",
+      "evidence": {
+        "purchase_ids": [
+          "ORD-011",
+          "ORD-012"
+        ],
+        "last_purchase": "2026-10-10",
+        "elapsed_days": 29,
+        "median_interval_days": 30,
+        "overdue_days": -1,
+        "stock": 120,
+        "quantity": 5
+      }
+    }
+  ],
+  "scoreFormula": "Recompra: 40 base + 30*min(días_vencidos/intervalo,1) + 20 stock suficiente + 10 consentimiento. Cross-sell: 55 fijo, hipótesis. Heurística 0–100; no probabilidad.",
+  "decision": {
+    "opportunity_id": "REORDER-C01-P01",
+    "channel": "whatsapp",
+    "reason": "Es la oportunidad con mayor respaldo: tres compras informadas, 49 días desde la última frente a una mediana de 30, consentimiento válido explícito en los datos adicionales y stock de 120 cajas para una propuesta de 12. El importe potencial bruto de ARS 102000 coincide con 12 × ARS 8500; no representa una venta obtenida.",
+    "why_whatsapp": "Elegido por la relación comercial existente con C01 y el consentimiento comercial sintético válido aportado. Permite consultar si existe necesidad actual de reposición. Falta confirmar que el consentimiento cubra WhatsApp y disponer de un destinatario válido antes de cualquier envío.",
+    "why_instagram": "Descartado: no hay evidencia de captación, audiencia o interés en Instagram. La señal disponible corresponde a una relación existente y una posible recompra.",
+    "why_none": "Descartado como selección estratégica porque existe una oportunidad sustentada para evaluar por WhatsApp. La elección no habilita un envío: sigue pendiente validar el canal y el destinatario.",
+    "hypothesis": "Consultar a Clínica Horizonte Demo por una posible reposición de P01 podría generar una respuesta sobre su necesidad actual. Los 19 días por encima del intervalo histórico justifican priorizar la consulta, pero no prueban demanda ni confirman la cantidad de 12 cajas.",
+    "metrics": [
+      "Antes de un eventual envío: confirmar cobertura del consentimiento para WhatsApp y destinatario válido.",
+      "Medir respuesta dentro de 7 días de un eventual contacto aprobado; ventana propuesta, no resultado.",
+      "Registrar necesidad confirmada, cantidad solicitada y pedidos efectivamente confirmados, sin asumir las 12 cajas propuestas.",
+      "Registrar importe confirmado por separado del potencial bruto de ARS 102000."
+    ],
+    "risks": [
+      "Todos los datos son sintéticos; no hay validación externa ni destinatario real.",
+      "El consentimiento comercial está informado, pero su alcance específico para WhatsApp no está explicitado.",
+      "Faltan fechas individuales de las órdenes para recalcular la mediana histórica.",
+      "El score 89 es una heurística de priorización, no una probabilidad de compra.",
+      "El stock informado puede requerir revalidación antes de una oferta; cantidad y necesidad siguen sin confirmar.",
+      "Cualquier futuro borrador debe mantenerse en dry-run y pasar por revisión y aprobación humana antes de enviarse."
+    ]
+  },
+  "campaign": {
+    "revisionId": "b29f358f-68c7-4ab8-a576-625fa0234b5b",
+    "recipient": "Clínica Horizonte Demo",
+    "contact": "Ana Demo",
+    "sender": "Distribuidora SaludPro Demo",
+    "product": "Guantes de nitrilo, caja x100",
+    "message": "Hola, Ana. Te contactamos de Distribuidora SaludPro Demo. ¿Necesitás reponer guantes de nitrilo, caja x100? Podemos prepararte una cotización. Si preferís no recibir más mensajes, respondé BAJA.",
+    "mode": "dry_run",
+    "messagesSent": 0,
+    "sendable": false
+  },
+  "handoff": {
+    "receiptId": "dry-run:9e288c1c-520f-4ebf-bdb7-a18c05b1c081",
+    "taskId": "cbc99b0d-1942-41e3-a65b-66358022cec2",
+    "runId": "9e288c1c-520f-4ebf-bdb7-a18c05b1c081",
+    "sourceTaskId": "32c2756a-91fe-411d-b541-07617d45d78c",
+    "sourceDocumentRevisionId": "b29f358f-68c7-4ab8-a576-625fa0234b5b",
+    "executedAt": "2026-11-08T23:21:50.660Z",
+    "outcome": "dry_run_validated_not_sent",
+    "adapter": "local-whatsapp-dry-run",
+    "requestHash": "162ec98019b7f13691acd7d3a715d3d116d3a83aa0d523340ec621058d3d3ac8",
+    "campaignHash": "3b2a48224d5351b876f5121035f01eea3b6a68c6f78963e657be859b4f77b9df",
+    "transport": {
+      "networkRequestsToMeta": 0,
+      "messagesSent": 0,
+      "providerMessageId": null,
+      "sendable": false
+    },
+    "validation": {
+      "payloadMatchesDraft": true,
+      "fictionalRecipient": true,
+      "commercialConsentRecorded": true,
+      "stockSufficient": true
+    },
+    "limitations": [
+      "Validación local del handoff; no validación ni entrega por Meta",
+      "Sin número real ni remitente configurado",
+      "El consentimiento comercial sintético no especifica alcance WhatsApp",
+      "Un envío real requeriría autorización explícita y configuración de plantillas/ventana aplicable"
+    ]
+  },
+  "review": {
+    "original": {
+      "revisionId": "ae41e5d0-32ce-42f2-9d02-63003c1ee1fe",
+      "message": "Hola, Ana Demo, de Clínica Horizonte Demo. Soy de MEDPULSE. ¿Necesitan reponer guantes de nitrilo, caja x100? Les proponemos evaluar 12 cajas, según su necesidad y previa confirmación de disponibilidad. ¿Querés que revisemos la disponibilidad para esa cantidad u otra? Si preferís dejar de recibir comunicaciones comerciales, respondé BAJA."
+    },
+    "request": {
+      "commentId": "3d05508c-cc98-46c8-a443-972ef579f469",
+      "at": "2026-11-08T23:01:25.709Z",
+      "text": "Solicito cambios en el borrador de WhatsApp.\n\nEl análisis comercial y la selección del canal están bien, pero el mensaje debe ser más natural, cercano y persuasivo, manteniendo un tono profesional B2B.\n\nMEDPULSE es la herramienta de IA, no la distribuidora que contacta al cliente. Usar un nombre ficticio de distribuidora claramente identificado en los datos.\n\nNo mencionar los 49 días desde la última compra ni proponer directamente 12 cajas. Esos datos deben utilizarse para la decisión comercial, pero el mensaje inicial tiene que consultar si el cliente necesita reponer stock y ofrecer una cotización.\n\nMantener la opción de baja, la condición de dry-run y todas las restricciones de consentimiento.\n\nAdemás, actualizar las instrucciones de Outreach Operator para que aplique estos criterios en futuras campañas.\n\nGenerar una nueva versión del mensaje y dejar registrada la revisión en Paperclip."
+    },
+    "formalDecisionId": "1114b3b6-d9fa-4d37-a936-f46be9f191b2",
+    "version2": {
+      "revisionId": "b29f358f-68c7-4ab8-a576-625fa0234b5b",
+      "message": "Hola, Ana. Te contactamos de Distribuidora SaludPro Demo. ¿Necesitás reponer guantes de nitrilo, caja x100? Podemos prepararte una cotización. Si preferís no recibir más mensajes, respondé BAJA.",
+      "runId": "03123e9a-20d7-4bed-9203-3f928b8de6af"
+    },
+    "pendingEvidence": {
+      "capturedAt": "2026-11-08T23:18:06.141Z",
+      "status": "in_review",
+      "approval": "pending_not_granted"
+    },
+    "originalAgentCloseHttpStatus": 403,
+    "newAgentCloseHttpStatus": 403,
+    "revisionIds": [
+      "b29f358f-68c7-4ab8-a576-625fa0234b5b",
+      "ae41e5d0-32ce-42f2-9d02-63003c1ee1fe"
+    ]
+  },
+  "limitations": [
+    "Snapshot exportado: no controla Paperclip ni actualiza automáticamente el estado.",
+    "Datos comerciales ficticios; las ejecuciones y revisiones son reales.",
+    "Handoff local ejecutado: no se contactó a Meta y no hay mensajes entregados.",
+    "Market Intelligence y fuentes externas pendientes."
+  ]
+}

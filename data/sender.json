@@ -1,0 +1,7 @@
+{
+  "id": "DIST-DEMO-01",
+  "dataset_kind": "synthetic",
+  "legal_name": "Distribuidora SaludPro Demo",
+  "display_name": "Distribuidora SaludPro Demo",
+  "note": "Distribuidora totalmente ficticia para esta demostración; MEDPULSE es su herramienta de IA, no el remitente."
+}

@@ -1,0 +1,5 @@
+import fs from 'node:fs/promises';import {documentUpdate} from './review-support.mjs';
+const h=JSON.parse(await fs.readFile('evidence/latest-handoff.json','utf8')),receipt=JSON.parse(await fs.readFile(h.directory+'/receipt.json','utf8'));
+const url=`http://127.0.0.1:3100/api/issues/${receipt.sourceTaskId}/documents/handoff-receipt`,prior=await fetch(url);if(!prior.ok&&prior.status!==404)throw Error(`Read ${prior.status}`);
+const current=prior.ok?await prior.json():null;
+const r=await fetch(url,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(documentUpdate(current,{title:`Recibo ejecutado por ${receipt.taskIdentifier} — WhatsApp dry-run`,format:'markdown',body:'```json\n'+JSON.stringify(receipt,null,2)+'\n```',changeSummary:'Recibo del handoff local vinculado a la campaña; sin aprobarla ni enviar mensajes'}))});if(!r.ok)throw Error(`${r.status} ${await r.text()}`);console.log(JSON.stringify({sourceTask:receipt.sourceIdentifier,handoffTask:receipt.taskIdentifier,runId:receipt.paperclipRunId,linked:true}));

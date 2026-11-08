@@ -1,0 +1,25 @@
+.runtime/
+node_modules/
+.env
+.env.*
+!.env.example
+evidence/
+dist/
+.vercel/
+delivery-local/
+*.log
+*.zip
+# Herramientas locales de diagnóstico y recuperación, fuera del entregable
+scripts/check-task.mjs
+scripts/codex-worker.mjs
+scripts/configure-process.mjs
+scripts/diagnose-review.mjs
+scripts/first-task.mjs
+scripts/inspect-recovery.mjs
+scripts/reconcile-outreach-review.mjs
+scripts/repair-review.mjs
+scripts/resume-outreach-review.mjs
+scripts/retry-outreach-review.mjs
+scripts/smoke-schema.json
+scripts/verify-review.mjs
+scripts/wake-outreach.mjs

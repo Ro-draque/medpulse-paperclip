@@ -1,0 +1,13 @@
+name: Verify deliverable
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test scripts/growth-core.test.mjs scripts/review-support.test.mjs scripts/delivery.test.mjs
+      - run: node scripts/build-dashboard.mjs
+      - run: node scripts/audit-release.mjs
