@@ -1,0 +1,57 @@
+{
+  "objective": "Recibir consultas de compra para reposición de botiquines",
+  "audience": "Responsables de compras de consultorios y centros ambulatorios",
+  "format": "Publicación vertical de feed · JPEG 1080 × 1350",
+  "headline": "Tu botiquín, al día.",
+  "copy": "¿Cuándo revisaste por última vez el botiquín de tu consultorio? Si necesitás reponer gasas, consultanos por presentación, disponibilidad y cotización de gasas estériles en paquete x100.",
+  "cta": "Consultá por gasas",
+  "visual": "Ilustración editorial de sobres de gasas y lista de inventario.",
+  "rationale": "La guía oficial aporta contexto sobre la revisión de botiquines. El catálogo de prueba vincula esa revisión con P02. La fuente no acredita demanda ni prestaciones de ese SKU.",
+  "product": {
+    "id": "P02",
+    "name": "Gasas estériles, paquete x100",
+    "stockType": "synthetic"
+  },
+  "publication": "review_only",
+  "edition": null,
+  "context": {
+    "classification": "guia_sanitaria",
+    "signal": "inventario_botiquin",
+    "interpretation": "La guía oficial incluye gasas entre los elementos del botiquín y recomienda revisar el estado y la reposición de sus insumos.",
+    "demandTrend": "sin evidencia comercial"
+  },
+  "sources": [
+    {
+      "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+      "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+      "retrievedAt": "2026-11-09T03:30:05.021Z",
+      "publisher": "Ministerio de Salud de la Nación",
+      "title": "Botiquín de primeros auxilios - DINESA",
+      "publishedAt": null,
+      "sha256": "f586c3c1b431adfea6a6ad8f25ea4bb1c7b0b7c37a724a8eaab5c7c984834674",
+      "file": "kit.html",
+      "attachmentId": "8581b2d8-4ee6-4708-9186-f239ee4858bc"
+    }
+  ],
+  "sourceTaskId": "99414318-c87e-4ba0-ad6a-60c9fd9fabe4",
+  "sourceTask": "MED-19",
+  "sourceHash": "551019f6bdb0d49376792286cc5875129cf193c2b8678aea409a67cc5a9412fb",
+  "campaignKey": "1b623bf004208c998314736e9c9015a699c482901e29225c949c786fb3d54511",
+  "image": {
+    "sha256": "e7f8d302576d326d61156cfeaaa4b1444593be6d7dc760e19c87122580db158d",
+    "attachmentId": "ff8a79a7-3b92-405a-b64b-616650901e42",
+    "width": 1080,
+    "height": 1350
+  },
+  "imageStatus": "generated",
+  "taskId": "e69a1a49-99d2-4388-b58e-e3e74415d5aa",
+  "identifier": "MED-20",
+  "runId": "8c9fea17-0234-4427-b846-35dc50bb430c",
+  "discoveryTaskId": "b58155fc-f87f-4d30-ac41-92e315d5a2b2",
+  "review": {
+    "status": "in_review",
+    "participant": "human"
+  },
+  "imageFile": "instagram-1b623bf00420.jpg",
+  "exportedAt": "2026-11-09T04:39:39.923Z"
+}

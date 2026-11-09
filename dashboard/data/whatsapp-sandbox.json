@@ -1,0 +1,174 @@
+{
+  "schema": "medpulse.whatsapp-dry-run-receipt.v1",
+  "receiptId": "dry-run:73c0e9e2-84ab-4574-9791-4f83674c4b1d",
+  "taskId": "d90b4b40-9621-4c43-afa7-6a2e7872089b",
+  "taskIdentifier": "MED-22",
+  "sourceTaskId": "32c2756a-91fe-411d-b541-07617d45d78c",
+  "sourceIdentifier": "MED-6",
+  "sourceDocumentRevisionId": "b29f358f-68c7-4ab8-a576-625fa0234b5b",
+  "sourceCampaignHash": "3b2a48224d5351b876f5121035f01eea3b6a68c6f78963e657be859b4f77b9df",
+  "requestHash": "162ec98019b7f13691acd7d3a715d3d116d3a83aa0d523340ec621058d3d3ac8",
+  "agentId": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+  "paperclipRunId": "73c0e9e2-84ab-4574-9791-4f83674c4b1d",
+  "executedAt": "2026-11-09T03:37:55.285Z",
+  "adapter": "local-whatsapp-dry-run",
+  "action": "validate_and_execute_local_http_handoff",
+  "outcome": "local_http_sandbox_validated_not_sent",
+  "validation": {
+    "payloadMatchesDraft": true,
+    "fictionalRecipient": true,
+    "commercialConsentRecorded": true,
+    "stockSufficient": true
+  },
+  "sourceApprovalAtExecution": {
+    "status": "in_review",
+    "state": "pending",
+    "lastOutcome": "changes_requested"
+  },
+  "transport": {
+    "networkRequestsToMeta": 0,
+    "messagesSent": 0,
+    "providerMessageId": null,
+    "sendable": false,
+    "localHttpRequests": 4
+  },
+  "limitations": [
+    "Validación local del handoff; no validación ni entrega por Meta",
+    "Sin número real ni remitente configurado",
+    "El consentimiento comercial sintético no especifica alcance WhatsApp",
+    "Un envío real requeriría autorización explícita y configuración de plantillas/ventana aplicable"
+  ],
+  "http": {
+    "environment": "local_http_sandbox",
+    "cases": [
+      {
+        "name": "invalid_payload",
+        "at": "2026-11-09T03:37:55.400Z",
+        "request": {
+          "method": "POST",
+          "url": "http://127.0.0.1:54429/v1/sandbox-phone/messages",
+          "headers": {
+            "Content-Type": "application/json",
+            "Idempotency-Key": "a5ec1819802b337b9c1d24d2bab402ddf97d4aa0cda8271c885fbe2fc5dc8252"
+          },
+          "body": {
+            "messaging_product": "whatsapp",
+            "to": "<FICTIONAL_RECIPIENT_NOT_SENDABLE>",
+            "type": "text",
+            "text": {}
+          }
+        },
+        "response": {
+          "status": 400,
+          "body": {
+            "error": "sandbox_invalid_whatsapp_payload"
+          }
+        }
+      },
+      {
+        "name": "http_failure",
+        "at": "2026-11-09T03:37:55.425Z",
+        "request": {
+          "method": "POST",
+          "url": "http://127.0.0.1:54429/v1/sandbox-phone/messages",
+          "headers": {
+            "Content-Type": "application/json",
+            "Idempotency-Key": "a5ec1819802b337b9c1d24d2bab402ddf97d4aa0cda8271c885fbe2fc5dc8252",
+            "X-Sandbox-Fault": "503"
+          },
+          "body": {
+            "messaging_product": "whatsapp",
+            "to": "<FICTIONAL_RECIPIENT_NOT_SENDABLE>",
+            "type": "text",
+            "text": {
+              "body": "Hola, Ana. Te contactamos de Distribuidora SaludPro Demo. ¿Necesitás reponer guantes de nitrilo, caja x100? Podemos prepararte una cotización. Si preferís no recibir más mensajes, respondé BAJA."
+            }
+          }
+        },
+        "response": {
+          "status": 503,
+          "body": {
+            "error": "sandbox_injected_failure",
+            "simulated": true
+          }
+        }
+      },
+      {
+        "name": "success",
+        "at": "2026-11-09T03:37:55.432Z",
+        "request": {
+          "method": "POST",
+          "url": "http://127.0.0.1:54429/v1/sandbox-phone/messages",
+          "headers": {
+            "Content-Type": "application/json",
+            "Idempotency-Key": "a5ec1819802b337b9c1d24d2bab402ddf97d4aa0cda8271c885fbe2fc5dc8252"
+          },
+          "body": {
+            "messaging_product": "whatsapp",
+            "to": "<FICTIONAL_RECIPIENT_NOT_SENDABLE>",
+            "type": "text",
+            "text": {
+              "body": "Hola, Ana. Te contactamos de Distribuidora SaludPro Demo. ¿Necesitás reponer guantes de nitrilo, caja x100? Podemos prepararte una cotización. Si preferís no recibir más mensajes, respondé BAJA."
+            }
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "messaging_product": "whatsapp",
+            "messages": [
+              {
+                "id": "simulated.whatsapp.a5ec1819802b337b9c1d24d2"
+              }
+            ],
+            "simulated": true,
+            "replayed": false
+          }
+        }
+      },
+      {
+        "name": "replay",
+        "at": "2026-11-09T03:37:55.438Z",
+        "request": {
+          "method": "POST",
+          "url": "http://127.0.0.1:54429/v1/sandbox-phone/messages",
+          "headers": {
+            "Content-Type": "application/json",
+            "Idempotency-Key": "a5ec1819802b337b9c1d24d2bab402ddf97d4aa0cda8271c885fbe2fc5dc8252"
+          },
+          "body": {
+            "messaging_product": "whatsapp",
+            "to": "<FICTIONAL_RECIPIENT_NOT_SENDABLE>",
+            "type": "text",
+            "text": {
+              "body": "Hola, Ana. Te contactamos de Distribuidora SaludPro Demo. ¿Necesitás reponer guantes de nitrilo, caja x100? Podemos prepararte una cotización. Si preferís no recibir más mensajes, respondé BAJA."
+            }
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "messaging_product": "whatsapp",
+            "messages": [
+              {
+                "id": "simulated.whatsapp.a5ec1819802b337b9c1d24d2"
+              }
+            ],
+            "simulated": true,
+            "replayed": true
+          }
+        }
+      }
+    ],
+    "simulatedMessageId": "simulated.whatsapp.a5ec1819802b337b9c1d24d2",
+    "newSimulatedEffects": 1
+  },
+  "verifiedAt": "2026-11-09T03:39:45.233Z",
+  "runStatus": "succeeded",
+  "receiptRevisionId": "7eda2cf1-5f41-4834-950e-ff2c3f26a8a2",
+  "receiptAttachmentId": "e94ba4cc-c065-4e0b-a87c-d48fb5a0f630",
+  "review": {
+    "status": "in_review",
+    "state": "pending"
+  }
+}

@@ -8,6 +8,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: node --test scripts/growth-core.test.mjs scripts/review-support.test.mjs scripts/delivery.test.mjs
+      - run: npm test
       - run: node scripts/build-dashboard.mjs
       - run: node scripts/audit-release.mjs

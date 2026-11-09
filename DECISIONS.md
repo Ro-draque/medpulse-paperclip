@@ -1,9 +1,11 @@
 # Decisiones y resultados
 
-Elegimos WhatsApp dry-run (B2): un caso concreto de recompra B2B con historial sintético, stock y consentimiento. Paperclip coordina cuatro agentes diferenciados mediante el adaptador process y Codex CLI. Los cálculos son deterministas; el modelo interpreta, selecciona canal y redacta. El grafo es explícito, no un plan dinámico del Director.
+**Alcance de la demo.** Elegimos B2 para probar un flujo de recompra con datos sintéticos y evidencia verificable. B3 lo complementa con borradores de Instagram listos para revisión. Paperclip coordina las tareas y conserva su historial.
 
-Funcionaron los handoffs por documentos y dependencias, el historial de revisiones y la aprobación humana obligatoria. Un adaptador local ejecutó y registró el dry-run en MED-7, vinculado a MED-6. Cero llamadas a Meta y cero mensajes enviados. El dashboard publica únicamente una exportación permitida de evidencias reales; los datos comerciales están rotulados como sintéticos.
+**Ejecución local.** Usamos Codex CLI para que Paperclip pudiera ejecutar trabajo asistido por un modelo en la computadora de la demo. Tras un fallo de enlaces simbólicos en Windows con `codex_local`, usamos el adaptador `process`. Codex CLI es una elección de esta implementación. El diseño de MEDPULSE permite sustituirlo por otros ejecutores.
 
-codex_local falló por enlaces simbólicos en Windows; process fue la alternativa. La primera actualización de borrador falló con HTTP 409 por faltar baseRevisionId; se corrigieron control de revisión, lectura del feedback y versionado. Se conservó el fallo y se comprobó HTTP 403 al cierre por el agente. No hay cuenta Meta conectada ni aprobación de plantillas. La instalación inicial superó diez minutos; el tiempo de reproducción con prerrequisitos se documenta por separado.
+**Prueba de WhatsApp.** Usamos un sandbox HTTP para comprobar el intercambio entre Paperclip y el adaptador sin enviar mensajes. MED-22 registró cuatro respuestas HTTP y un solo efecto simulado pese a la repetición. Su recibo vincula la ejecución con la revisión de MED-6. [Evidencia de la prueba](docs/WHATSAPP-SANDBOX.md)
 
-La semana siguiente incorporaríamos Market Intelligence con fuente comercial verificable, medición de resultados y costes, y una prueba de integración en cuenta autorizada. Primero se completa la publicación GitHub/Vercel y la evidencia del challenge.
+**Reproducción.** Una compañía nueva completó el flujo base en 108,82 segundos con Paperclip y Codex listos. El arranque desde cero dentro de diez minutos sigue sin validarse. [Registro de la prueba](docs/reproduction-2026-11-09.json)
+
+**Límite y próximo paso.** Creamos la app MEDPULSE en Meta for Developers. Un bloqueo al crear el portafolio empresarial impidió completar la configuración de WhatsApp Business. Las pruebas de los adaptadores de Meta usaron respuestas simuladas. No hubo llamadas autenticadas a Meta, envíos reales ni publicaciones reales. El siguiente paso es resolver el portafolio y verificar el acceso al número de prueba antes de solicitar autorización para un envío. [Evolución futura](ROADMAP.md)

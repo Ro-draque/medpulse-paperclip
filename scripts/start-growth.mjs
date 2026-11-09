@@ -1,10 +1,23 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {DatabaseSync} from 'node:sqlite';
 import {hash,validateDataset} from './growth-core.mjs';
+import {baseDemo,demoDatabasePath,importedDemo} from './demo-spreadsheet.mjs';
 const root=path.resolve(import.meta.dirname,'..'),base='http://127.0.0.1:3100';
 async function api(route,method='GET',body){const r=await fetch(base+route,{method,headers:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const t=await r.text();if(!r.ok)throw Error(`${r.status} ${t}`);return t?JSON.parse(t):null;}
-const companyName=process.env.MEDPULSE_COMPANY_NAME||'MEDPULSE';
+const fromSpreadsheet=process.argv.includes('--planilla');
+const companyName=fromSpreadsheet?'MEDPULSE Planillas Demo':process.env.MEDPULSE_COMPANY_NAME||'MEDPULSE';
+let input=baseDemo();
+if(fromSpreadsheet){
+ const db=new DatabaseSync(demoDatabasePath(),{readOnly:true});
+ try{
+  const saved=importedDemo(db);
+  if(!saved)throw Error('Primero cargá las planillas desde el centro privado de Gerencia.');
+  input=JSON.parse(saved.dataset);
+ }finally{db.close();}
+}
+const dataset=validateDataset(input);
 let company=(await api('/api/companies')).find(c=>c.name===companyName);
 if(!company)company=await api('/api/companies','POST',{name:companyName,description:'Compañía de Growth B2B con datos sintéticos, ejecuciones reales y revisión humana.'});
 const existing=await api(`/api/companies/${company.id}/agents`);const director=existing.find(a=>a.name==='Growth Director');
@@ -16,7 +29,6 @@ for(const [stage,name] of Object.entries(roles)){
  const data={name,role:stage==='director'?'ceo':'general',title:name,adapterType:'process',adapterConfig,runtimeConfig:{heartbeat:{enabled:false,wakeOnDemand:true}},...(stage==='director'?{}:{reportsTo:agents.director})};
  const a=current?await api(`/api/agents/${current.id}`,'PATCH',data):await api(`/api/companies/${company.id}/agents`,'POST',data);agents[stage]=a.id;
 }
-const dataset=validateDataset(JSON.parse(await fs.readFile('data/distributor.json','utf8')));
 const batch=crypto.randomUUID(),dir=path.join(root,'evidence/growth',batch);await fs.mkdir(dir,{recursive:true});
 const datasetPath=`evidence/growth/${batch}/dataset.json`;await fs.writeFile(path.join(root,datasetPath),JSON.stringify(dataset,null,2));
 const tasks={};let previous=null;
@@ -26,6 +38,7 @@ for(const stage of Object.keys(roles)){
  tasks[stage]={id:t.id,identifier:t.identifier};previous=t.id;
 }
 const manifest={batch,companyId:company.id,agents,tasks,datasetPath,datasetHash:hash(dataset),createdAt:new Date().toISOString()};
-await fs.writeFile(path.join(dir,'manifest.json'),JSON.stringify(manifest,null,2));await fs.writeFile('evidence/latest-growth.json',JSON.stringify(manifest,null,2));
+await fs.writeFile(path.join(dir,'manifest.json'),JSON.stringify(manifest,null,2));
+await fs.writeFile(fromSpreadsheet?'evidence/latest-growth-planilla.json':'evidence/latest-growth.json',JSON.stringify(manifest,null,2));
 for(const stage of ['outreach','strategy','sales','director'])await api(`/api/issues/${tasks[stage].id}`,'PATCH',{status:'todo'});
 console.log(JSON.stringify(manifest,null,2));

@@ -1,0 +1,570 @@
+{
+  "schema": "medpulse.market-public.v1",
+  "exportedAt": "2026-11-09T02:22:21.091Z",
+  "batch": "55143bc1-3809-4275-9ef0-3297e2ead185",
+  "source": {
+    "provider": "Gobierno de Tierra del Fuego — portal oficial de Compras",
+    "url": "https://compras.tierradelfuego.gob.ar/",
+    "asOf": "2026-11-08",
+    "retrievedAt": "2026-11-08T23:47:23.143Z",
+    "manifestHash": "45eda673bcb9699f7f01820a8084bc743ddce9138b714fc9fffb83998ab25fa0",
+    "sampling": "Dos avisos más recientes por búsqueda nitrilo/gasas; sin inferir tendencia, cobertura parcial.",
+    "records": 4,
+    "importSeconds": 15.95,
+    "apiProbeStatus": 404
+  },
+  "agents": [
+    {
+      "id": "25d21761-944f-4f5f-a2c4-e433d551d4c1",
+      "name": "Growth Director",
+      "adapter": "process"
+    },
+    {
+      "id": "447d9133-6944-401f-916f-92a327b69803",
+      "name": "Market Intelligence Analyst",
+      "adapter": "process"
+    },
+    {
+      "id": "fe1b982f-03a6-4108-8898-d4c8b132eed7",
+      "name": "Sales Intelligence",
+      "adapter": "process"
+    },
+    {
+      "id": "7fc30224-05f9-47ce-8a28-33309092dec8",
+      "name": "Campaign Strategist",
+      "adapter": "process"
+    },
+    {
+      "id": "18b1df6d-bb53-4b6e-a03b-9fbe21cbe28f",
+      "name": "Outreach Operator",
+      "adapter": "process"
+    }
+  ],
+  "tasks": [
+    {
+      "stage": "market",
+      "id": "f6582cfb-023d-4d9c-9d5e-d671541e05ca",
+      "identifier": "MED-8",
+      "status": "done",
+      "agentId": "447d9133-6944-401f-916f-92a327b69803",
+      "sourceTaskIds": [],
+      "runId": "bddcc4d3-7818-4f81-81de-4aa36e1a10e6",
+      "documentRevisionId": "cedc22cb-c759-4848-bc78-91ad65a0ea37",
+      "resultHash": "bf915e0a0c071f310052c0bb7da5c55d853c5b6c5114722a5986309cb607311d"
+    },
+    {
+      "stage": "sales",
+      "id": "4ebc996f-e9df-40df-8460-87bcf3490517",
+      "identifier": "MED-9",
+      "status": "done",
+      "agentId": "fe1b982f-03a6-4108-8898-d4c8b132eed7",
+      "sourceTaskIds": [
+        "f6582cfb-023d-4d9c-9d5e-d671541e05ca"
+      ],
+      "runId": "6fd09227-212c-4c52-b416-e5758d83c492",
+      "documentRevisionId": "0ef9e783-3c08-4891-b3f1-79a1c64342ff",
+      "resultHash": "5850f5d00afa63e82abf69ec189b7c410e0331126e3cbed3e4094b512b4a8ca3"
+    },
+    {
+      "stage": "strategy",
+      "id": "6b2163a1-ba1b-45cc-90c3-09429974eebc",
+      "identifier": "MED-10",
+      "status": "done",
+      "agentId": "7fc30224-05f9-47ce-8a28-33309092dec8",
+      "sourceTaskIds": [
+        "f6582cfb-023d-4d9c-9d5e-d671541e05ca",
+        "4ebc996f-e9df-40df-8460-87bcf3490517"
+      ],
+      "runId": "0c21971a-39aa-41f6-9ebf-80c76d5be21f",
+      "documentRevisionId": "ae35a021-1ae7-4e71-97c0-02c7e9ee24da",
+      "resultHash": "a11b090173b06c68f36063c11658d19d72d4df82809d4ce7d0c4494e39f72077"
+    }
+  ],
+  "runs": [
+    {
+      "id": "0c21971a-39aa-41f6-9ebf-80c76d5be21f",
+      "taskId": "6b2163a1-ba1b-45cc-90c3-09429974eebc",
+      "agentId": "7fc30224-05f9-47ce-8a28-33309092dec8",
+      "status": "succeeded",
+      "startedAt": "2026-11-09T02:20:39.381Z",
+      "finishedAt": "2026-11-09T02:21:15.281Z",
+      "exitCode": 0,
+      "durationSeconds": 35.9
+    },
+    {
+      "id": "6fd09227-212c-4c52-b416-e5758d83c492",
+      "taskId": "4ebc996f-e9df-40df-8460-87bcf3490517",
+      "agentId": "fe1b982f-03a6-4108-8898-d4c8b132eed7",
+      "status": "succeeded",
+      "startedAt": "2026-11-09T02:20:03.441Z",
+      "finishedAt": "2026-11-09T02:20:38.922Z",
+      "exitCode": 0,
+      "durationSeconds": 35.48
+    },
+    {
+      "id": "dbc46522-657d-4997-8eb3-93413c32dfe5",
+      "taskId": "4ebc996f-e9df-40df-8460-87bcf3490517",
+      "agentId": "fe1b982f-03a6-4108-8898-d4c8b132eed7",
+      "status": "failed",
+      "startedAt": "2026-11-08T23:48:40.253Z",
+      "finishedAt": "2026-11-08T23:48:49.193Z",
+      "exitCode": 1,
+      "durationSeconds": 8.94
+    },
+    {
+      "id": "bddcc4d3-7818-4f81-81de-4aa36e1a10e6",
+      "taskId": "f6582cfb-023d-4d9c-9d5e-d671541e05ca",
+      "agentId": "447d9133-6944-401f-916f-92a327b69803",
+      "status": "succeeded",
+      "startedAt": "2026-11-08T23:48:02.937Z",
+      "finishedAt": "2026-11-08T23:48:40.054Z",
+      "exitCode": 0,
+      "durationSeconds": 37.12
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "REORDER-C01-P01",
+      "origin": "internal",
+      "type": "reorder",
+      "product": {
+        "id": "P01",
+        "name": "Guantes de nitrilo, caja x100",
+        "syntheticStock": 120,
+        "unit": "caja"
+      },
+      "customer": {
+        "id": "C01",
+        "name": "Clínica Horizonte Demo",
+        "segment": "Clínica",
+        "synthetic": true
+      },
+      "score": {
+        "total": 90,
+        "components": {
+          "evidence": 30,
+          "productFit": 25,
+          "freshness": 10,
+          "stock": 15,
+          "actionability": 10
+        },
+        "formulaVersion": "opportunity-score-v1",
+        "notProbability": true
+      },
+      "sources": [
+        {
+          "kind": "synthetic_purchase_history",
+          "datasetHash": "c87da8aa77540526a7c23c2090a029281adf0d1333f340eb9770248ed638edcc",
+          "purchaseIds": [
+            "ORD-001",
+            "ORD-002",
+            "ORD-003"
+          ]
+        }
+      ],
+      "evidence": {
+        "purchase_ids": [
+          "ORD-001",
+          "ORD-002",
+          "ORD-003"
+        ],
+        "last_purchase": "2026-09-20",
+        "elapsed_days": 49,
+        "median_interval_days": 30,
+        "overdue_days": 19,
+        "stock": 120,
+        "quantity": 12
+      },
+      "externalContextIds": [
+        "EXT-TDF-280370-P01",
+        "EXT-TDF-270677-P01"
+      ],
+      "certainty": "Patrón en historial sintético"
+    },
+    {
+      "id": "CROSS-C01-P02",
+      "origin": "internal",
+      "type": "cross_sell",
+      "product": {
+        "id": "P02",
+        "name": "Gasas estériles, paquete x100",
+        "syntheticStock": 150,
+        "unit": "paquete"
+      },
+      "customer": {
+        "id": "C01",
+        "name": "Clínica Horizonte Demo",
+        "segment": "Clínica",
+        "synthetic": true
+      },
+      "score": {
+        "total": 80,
+        "components": {
+          "evidence": 20,
+          "productFit": 25,
+          "freshness": 10,
+          "stock": 15,
+          "actionability": 10
+        },
+        "formulaVersion": "opportunity-score-v1",
+        "notProbability": true
+      },
+      "sources": [
+        {
+          "kind": "synthetic_purchase_history",
+          "datasetHash": "c87da8aa77540526a7c23c2090a029281adf0d1333f340eb9770248ed638edcc",
+          "purchaseIds": [
+            "ORD-003"
+          ]
+        }
+      ],
+      "evidence": {
+        "purchase_ids": [
+          "ORD-003"
+        ],
+        "complement_of": "P01",
+        "stock": 150,
+        "quantity": 1,
+        "hypothesis": "Complementariedad definida en catálogo sintético; no demuestra propensión de compra."
+      },
+      "externalContextIds": [
+        "EXT-TDF-289532-P02",
+        "EXT-TDF-274729-P02"
+      ],
+      "certainty": "Hipótesis de complementariedad sintética"
+    },
+    {
+      "id": "EXT-TDF-289532-P02",
+      "origin": "external",
+      "type": "public_procurement_signal",
+      "product": {
+        "id": "P02",
+        "name": "Gasas estériles, paquete x100",
+        "syntheticStock": 150,
+        "unit": "paquete"
+      },
+      "customer": null,
+      "score": {
+        "total": 75,
+        "components": {
+          "evidence": 35,
+          "productFit": 15,
+          "freshness": 10,
+          "stock": 15,
+          "actionability": 0
+        },
+        "formulaVersion": "opportunity-score-v1",
+        "notProbability": true
+      },
+      "sources": [
+        {
+          "id": "TDF-289532",
+          "url": "https://compras.tierradelfuego.gob.ar/?p=289532",
+          "publishedAt": "2026-10-06",
+          "retrievedAt": "2026-11-08T23:47:21.120Z",
+          "evidenceSha256": "1849d31427c3ebb9d0f7f2faa9db87c13ec9e0d6dcd742e64238d2162f8ee5cd",
+          "evidenceAttachmentId": "bd205616-ffce-46df-bb75-80cf1318b291"
+        }
+      ],
+      "classification": {
+        "ageDays": 33,
+        "status": "historical_expired",
+        "deadline": {
+          "date": "2026-10-09",
+          "time": "12:00",
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "openTenderVerified": false,
+        "demandConfirmedForDistributor": false,
+        "trendEstablished": false
+      },
+      "limitations": [
+        "Coincidencia de familia, no equivalencia técnica: verificar pliego, presentación, certificaciones y logística.",
+        "El aviso no acredita demanda de los clientes sintéticos ni un pedido a la distribuidora.",
+        "No se verificó plazo vigente; no presentar ofertas ni contactar al organismo automáticamente.",
+        "Una muestra acotada de avisos no demuestra una tendencia de mercado."
+      ],
+      "certainty": "Documento oficial verificado; alcance comercial sin confirmar",
+      "recommendedNextStep": "Verificar estado y especificaciones del proceso; usar como contexto comercial, sin atribuir intención de compra a un cliente.",
+      "sourceTitle": "HRU – DIFUSIÓN – COMPRA DIRECTA Nº 97/2026 – RAF 529 – LLAMADO 01 MS-77392-2026 «SOLICITUD DE ADQUISICIÓN DE GASAS DE QUIRÓFANO NO COTIZADAS EN EXP N° 52633 – SERVICIO DE ESTERILIZACIÓN – HOSPITAL REGIONAL USHUAIA»"
+    },
+    {
+      "id": "EXT-TDF-274729-P02",
+      "origin": "external",
+      "type": "public_procurement_signal",
+      "product": {
+        "id": "P02",
+        "name": "Gasas estériles, paquete x100",
+        "syntheticStock": 150,
+        "unit": "paquete"
+      },
+      "customer": null,
+      "score": {
+        "total": 70,
+        "components": {
+          "evidence": 35,
+          "productFit": 15,
+          "freshness": 5,
+          "stock": 15,
+          "actionability": 0
+        },
+        "formulaVersion": "opportunity-score-v1",
+        "notProbability": true
+      },
+      "sources": [
+        {
+          "id": "TDF-274729",
+          "url": "https://compras.tierradelfuego.gob.ar/?p=274729",
+          "publishedAt": "2026-05-28",
+          "retrievedAt": "2026-11-08T23:47:22.170Z",
+          "evidenceSha256": "fec51bb2f5965b6e23b0509e1e108ea3c9bec88d0e445658b636328252ad5095",
+          "evidenceAttachmentId": "07389f55-d14e-4b91-a70e-eb728e9ccc43"
+        }
+      ],
+      "classification": {
+        "ageDays": 164,
+        "status": "historical_award",
+        "deadline": null,
+        "openTenderVerified": false,
+        "demandConfirmedForDistributor": false,
+        "trendEstablished": false
+      },
+      "limitations": [
+        "Coincidencia de familia, no equivalencia técnica: verificar pliego, presentación, certificaciones y logística.",
+        "El aviso no acredita demanda de los clientes sintéticos ni un pedido a la distribuidora.",
+        "No se verificó plazo vigente; no presentar ofertas ni contactar al organismo automáticamente.",
+        "Una muestra acotada de avisos no demuestra una tendencia de mercado."
+      ],
+      "certainty": "Documento oficial verificado; alcance comercial sin confirmar",
+      "recommendedNextStep": "Verificar estado y especificaciones del proceso; usar como contexto comercial, sin atribuir intención de compra a un cliente.",
+      "sourceTitle": "RECTIFICACION PREADJUDICACION DE LA COMPRA DIRECTA Nº 48 /2026 RAF 529 MS-E-36691-2026 «PEDIDO URGENTE GASAS TUBULARES – SERVICIO ESTERILIZACION HRU-«"
+    },
+    {
+      "id": "EXT-TDF-280370-P01",
+      "origin": "external",
+      "type": "public_procurement_signal",
+      "product": {
+        "id": "P01",
+        "name": "Guantes de nitrilo, caja x100",
+        "syntheticStock": 120,
+        "unit": "caja"
+      },
+      "customer": null,
+      "score": {
+        "total": 70,
+        "components": {
+          "evidence": 35,
+          "productFit": 15,
+          "freshness": 5,
+          "stock": 15,
+          "actionability": 0
+        },
+        "formulaVersion": "opportunity-score-v1",
+        "notProbability": true
+      },
+      "sources": [
+        {
+          "id": "TDF-280370",
+          "url": "https://compras.tierradelfuego.gob.ar/?p=280370",
+          "publishedAt": "2026-07-21",
+          "retrievedAt": "2026-11-08T23:47:13.399Z",
+          "evidenceSha256": "56291db33140fc71d4ce7140365f9ef09be03cba1246b8cefc92eb6ffd012aa1",
+          "evidenceAttachmentId": "632a6bd1-4598-4447-a73c-7890e4317abb"
+        }
+      ],
+      "classification": {
+        "ageDays": 110,
+        "status": "historical_expired",
+        "deadline": {
+          "date": "2026-07-24",
+          "time": "12:00",
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "openTenderVerified": false,
+        "demandConfirmedForDistributor": false,
+        "trendEstablished": false
+      },
+      "limitations": [
+        "Coincidencia de familia, no equivalencia técnica: verificar pliego, presentación, certificaciones y logística.",
+        "El aviso no acredita demanda de los clientes sintéticos ni un pedido a la distribuidora.",
+        "No se verificó plazo vigente; no presentar ofertas ni contactar al organismo automáticamente.",
+        "Una muestra acotada de avisos no demuestra una tendencia de mercado."
+      ],
+      "certainty": "Documento oficial verificado; alcance comercial sin confirmar",
+      "recommendedNextStep": "Verificar estado y especificaciones del proceso; usar como contexto comercial, sin atribuir intención de compra a un cliente.",
+      "sourceTitle": "COMPRA DIRECTA Nº 75/2026 – RAF 529 – LLAMADO 01 MS-64111-2026 » SOLICITUD URGENTE GUANTES DE NITRILO, SOLICITADO POR EL DEPOSITO CENTRAL HRU.»"
+    },
+    {
+      "id": "EXT-TDF-270677-P01",
+      "origin": "external",
+      "type": "public_procurement_signal",
+      "product": {
+        "id": "P01",
+        "name": "Guantes de nitrilo, caja x100",
+        "syntheticStock": 120,
+        "unit": "caja"
+      },
+      "customer": null,
+      "score": {
+        "total": 65,
+        "components": {
+          "evidence": 35,
+          "productFit": 15,
+          "freshness": 0,
+          "stock": 15,
+          "actionability": 0
+        },
+        "formulaVersion": "opportunity-score-v1",
+        "notProbability": true
+      },
+      "sources": [
+        {
+          "id": "TDF-270677",
+          "url": "https://compras.tierradelfuego.gob.ar/?p=270677",
+          "publishedAt": "2026-04-20",
+          "retrievedAt": "2026-11-08T23:47:14.413Z",
+          "evidenceSha256": "3216489ec990ca6d2eb728f15cdfa5af2a36a33779e2a136c0a7113c9b69cd1f",
+          "evidenceAttachmentId": "dec1c39a-46dc-46df-b7ea-fdc5dc2fd89a"
+        }
+      ],
+      "classification": {
+        "ageDays": 202,
+        "status": "historical_expired",
+        "deadline": {
+          "date": "2026-04-23",
+          "time": "09:59",
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "openTenderVerified": false,
+        "demandConfirmedForDistributor": false,
+        "trendEstablished": false
+      },
+      "limitations": [
+        "Coincidencia de familia, no equivalencia técnica: verificar pliego, presentación, certificaciones y logística.",
+        "El aviso no acredita demanda de los clientes sintéticos ni un pedido a la distribuidora.",
+        "No se verificó plazo vigente; no presentar ofertas ni contactar al organismo automáticamente.",
+        "Una muestra acotada de avisos no demuestra una tendencia de mercado."
+      ],
+      "certainty": "Documento oficial verificado; alcance comercial sin confirmar",
+      "recommendedNextStep": "Verificar estado y especificaciones del proceso; usar como contexto comercial, sin atribuir intención de compra a un cliente.",
+      "sourceTitle": "CONTRATACIÓN DIRECTA POR COMPULSA ABREVIADA N° 47/2026 – RAF 560. EXPEDIENTE N° MPA-E-26487-2026 OBJETO: “referente a la adquisición de DOCE (12) cajas guantes de nitrilo de distintas medidas, destinados a desarrollar las actividades correspondientes en el laboratorio de toxina y microbiología, perteneciente a la Secretaría de Pesca y Acuicultura, dependiente del Ministerio de Producción y Ambiente»."
+    }
+  ],
+  "scoreFormula": {
+    "version": "opportunity-score-v1",
+    "meaning": "Índice de prioridad por reglas, 0–100; no es probabilidad de compra ni estimación de ventas.",
+    "components": {
+      "evidence": 35,
+      "productFit": 25,
+      "freshness": 15,
+      "stock": 15,
+      "actionability": 10
+    },
+    "rules": {
+      "evidence": "Fuente oficial de compra 35; recompra interna con >=2 compras 30; complementariedad interna 20.",
+      "productFit": "Producto interno exacto 25; coincidencia de familia externa 15, exige verificar especificación.",
+      "freshness": "<=30 días 15; 31–90 días 10; 91–180 días 5; >180 días 0. Internas: fecha de la última compra.",
+      "stock": "Stock sintético suficiente 15; insuficiente 0.",
+      "actionability": "Interna con consentimiento 10. Externa solo con plazo abierto verificado 10; de otro modo 0."
+    }
+  },
+  "salesInterpretation": {
+    "summary": "En el escenario sintético de MEDPULSE, la primera prioridad es revisar la recompra de P01 para C01 (90 puntos), seguida de la hipótesis de venta cruzada de P02 para el mismo cliente (80 puntos). Los cuatro avisos reales de Tierra del Fuego orientan qué organismos y especificaciones investigar. Todos son históricos y tienen 0 puntos de accionabilidad. Los puntajes son índices de prioridad por reglas y no representan probabilidades ni ventas esperadas.",
+    "internalVsExternal": [
+      "P01 | REORDER-C01-P01 (90). El historial sintético de C01 registra tres compras. Pasaron 49 días desde la última frente a una mediana de 30, una diferencia de 19 días. La propuesta de 12 cajas por ARS 102.000 surge de datos sintéticos. Los avisos TDF-280370 y TDF-270677 (70 y 65) documentan llamados históricos por guantes de nitrilo para el Hospital Regional Ushuaia y un laboratorio de la Secretaría de Pesca y Acuicultura. Ambos figuran vencidos y su coincidencia con P01 es de familia.",
+      "P02 | CROSS-C01-P02 (80). La compra sintética ORD-003 y la relación de complemento definida en el catálogo sustentan la hipótesis de ofrecer un paquete por ARS 6.200. TDF-289532 (75) corresponde a un llamado vencido por gasas de quirófano y TDF-274729 (70) a una rectificación histórica de preadjudicación por gasas tubulares. Ninguno establece equivalencia técnica con las gasas estériles P02, paquete x100.",
+      "Los avisos permiten identificar organismos compradores y usos documentados para orientar la investigación. Los vínculos por familia aportan contexto al producto y dejan intacta la evidencia interna sobre C01. Ningún aviso acredita intención de compra de C01, un pedido a MEDPULSE ni demanda de la distribuidora."
+    ],
+    "productPriorities": [
+      "P01 | Prioridad interna 1. Stock sintético de 120 cajas x100 frente a 12 sugeridas para C01, con consentimiento válido en el escenario. Mantener excluido a C03 por falta de consentimiento y a C05 porque su recompra aún no alcanza el intervalo de referencia.",
+      "P02 | Prioridad interna 2. Stock sintético de 150 paquetes x100 frente a uno sugerido para C01. Mantener excluido a C02 porque su recompra aún no alcanza el intervalo de referencia. Para el canal público, revisar las especificaciones de cada renglón antes de considerar el encaje de P02.",
+      "P03 | Priorizar la revisión de abastecimiento. El stock sintético es de 0 cajas frente a 4 sugeridas para C04, que sigue excluido por stock insuficiente.",
+      "P04 | Mantener en observación. Hay 80 cajas x50 en stock sintético y el análisis suministrado no identifica una oportunidad calculada para este producto."
+    ],
+    "expansionResearch": [
+      "En Tierra del Fuego, separar los antecedentes por organismo, servicio y uso. Investigar depósito hospitalario y laboratorio público para P01, y esterilización hospitalaria para P02. Revisar pliegos y renglones para comparar talles, presentación y certificaciones de guantes, y tipo de gasa, dimensiones, esterilidad y presentación para P02. Registrar también las condiciones de entrega.",
+      "Para explorar otras provincias, relevar sus portales oficiales con el mismo período y criterios de inclusión. Registrar jurisdicción, organismo, segmento, expediente, renglón, especificaciones y estado. Agrupar publicaciones y rectificaciones del mismo expediente antes de comparar regiones y documentar la cobertura de cada portal.",
+      "Para el canal privado, investigar clínicas, consultorios, centros médicos y laboratorios como segmentos separados. Relevar requisitos de compra y validar hipótesis de recompra y complementariedad con datos propios autorizados cuando estén disponibles. Mantener ese análisis separado del registro de compras públicas."
+    ],
+    "risks": [
+      "Los avisos de una sola provincia y una muestra acotada no permiten establecer una tendencia ni extrapolar demanda al país.",
+      "La coincidencia por familia y los 15 puntos de stock sintético pueden elevar un puntaje externo sin demostrar disponibilidad real para ofertar ni cumplimiento técnico. Cualquier evaluación comercial futura requiere verificar el pliego, la logística y un plazo abierto en la fuente oficial.",
+      "La trazabilidad externa se basa en el informe de Paperclip suministrado, tarea f6582cfb-023d-4d9c-9d5e-d671541e05ca, hash bf915e0a0c071f310052c0bb7da5c55d853c5b6c5114722a5986309cb607311d. El estado de los procesos se tomó del informe, sin verificación independiente."
+    ]
+  },
+  "marketInterpretation": {
+    "summary": "Se identificaron cuatro señales oficiales reales de compras públicas de Tierra del Fuego para familias de guantes de nitrilo y gasas. Ninguna tiene apertura o plazo vigente verificado. Los datos internos de MEDPULSE son sintéticos. El informe queda preparado para Sales Intelligence; no se cargó en Paperclip ni se ejecutaron acciones comerciales.",
+    "findingsExplanation": [
+      "EXT-TDF-289532-P02: gasas de quirófano, antigüedad calculada de 33 días y estado deadline_unverified. Puntaje 75 = evidencia 35 + ajuste de producto 15 + actualidad 10 + stock 15 + accionabilidad 0. Es la mayor prioridad relativa para verificar documentación, sin acreditar una oportunidad abierta. Fuente TDF-289532; URL https://compras.tierradelfuego.gob.ar/?p=289532; publicación 2026-10-06; consulta 2026-11-08T23:47:21.120Z; SHA-256 1849d31427c3ebb9d0f7f2faa9db87c13ec9e0d6dcd742e64238d2162f8ee5cd.",
+      "EXT-TDF-280370-P01: guantes de nitrilo, antigüedad calculada de 110 días y estado deadline_unverified. Puntaje 70 = evidencia 35 + ajuste de producto 15 + actualidad 5 + stock 15 + accionabilidad 0. La palabra «urgente» del título no acredita urgencia vigente. Fuente TDF-280370; URL https://compras.tierradelfuego.gob.ar/?p=280370; publicación 2026-07-21; consulta 2026-11-08T23:47:13.399Z; SHA-256 56291db33140fc71d4ce7140365f9ef09be03cba1246b8cefc92eb6ffd012aa1.",
+      "EXT-TDF-274729-P02: rectificación de preadjudicación de gasas tubulares, antigüedad calculada de 164 días y clasificación suministrada historical_award. Puntaje 70 = evidencia 35 + ajuste de producto 15 + actualidad 5 + stock 15 + accionabilidad 0. Corresponde tratarlo como antecedente histórico; el título no demuestra adjudicación definitiva ni disponibilidad para ofertar. Fuente TDF-274729; URL https://compras.tierradelfuego.gob.ar/?p=274729; publicación 2026-05-28; consulta 2026-11-08T23:47:22.170Z; SHA-256 fec51bb2f5965b6e23b0509e1e108ea3c9bec88d0e445658b636328252ad5095.",
+      "EXT-TDF-270677-P01: guantes de nitrilo, antigüedad calculada de 202 días y estado deadline_unverified. Puntaje 65 = evidencia 35 + ajuste de producto 15 + actualidad 0 + stock 15 + accionabilidad 0. Las doce cajas mencionadas en el título pertenecen al objeto publicado; el campo quantity del hallazgo permanece null y no representa demanda para MEDPULSE. Fuente TDF-270677; URL https://compras.tierradelfuego.gob.ar/?p=270677; publicación 2026-04-20; consulta 2026-11-08T23:47:14.413Z; SHA-256 3216489ec990ca6d2eb728f15cdfa5af2a36a33779e2a136c0a7113c9b69cd1f.",
+      "Los puntajes conservan opportunity-score-v1: son sumas de reglas, nunca probabilidades. Todas las coincidencias son family_only; customer_id y quantity permanecen null. La evidencia externa es real; catálogo, stock, precios, clientes y compras internos son sintéticos."
+    ],
+    "limitations": [
+      "Cobertura parcial al 2026-11-08: dos avisos más recientes por cada búsqueda «nitrilo» y «gasas» en un único portal provincial. No permite inferir tendencias, tamaño de mercado ni demanda de clientes.",
+      "La consulta por API devolvió HTTP 404; las búsquedas web y las cuatro publicaciones registraron HTTP 200. Una respuesta HTTP 200 no acredita vigencia del proceso.",
+      "El análisis utiliza exclusivamente los extractos y metadatos suministrados. No se verificaron independientemente archivos, hashes, pliegos, modificaciones, cierres ni resultados.",
+      "Las coincidencias de familia requieren comprobar presentación, medidas, esterilidad, certificaciones y logística. El componente de stock usa información sintética y no confirma disponibilidad operativa.",
+      "Los avisos no confirman pedidos, ventas, intención de compra de clientes ni resultados para la distribuidora."
+    ],
+    "nextSteps": [
+      "Sales Intelligence: incorporar este informe y sus referencias como documento de la tarea de Paperclip. La entrega en esa plataforma queda pendiente porque no se utilizaron herramientas.",
+      "Verificar primero TDF-289532 y luego los avisos de nitrilo: consultar estado oficial, pliegos y modificaciones antes de considerar cualquier posibilidad de participación.",
+      "Mantener TDF-274729 como antecedente histórico y verificar su documentación para precisar el resultado del procedimiento.",
+      "Validar equivalencia técnica con P01 y P02 y sustituir los datos internos sintéticos por información operativa verificada antes de adoptar decisiones comerciales.",
+      "Conservar recommendedChannel=none y approval=not_requested_no_execution en los cuatro hallazgos. No enviar mensajes, presentar ofertas ni atribuir intención de compra a clientes."
+    ]
+  },
+  "decision": {
+    "selectedOpportunityId": "REORDER-C01-P01",
+    "channel": "whatsapp",
+    "reason": "Es la oportunidad con mayor puntaje del informe, 90 frente a 80 de CROSS-C01-P02. La recompra se apoya en tres compras sintéticas y en 49 días transcurridos frente a una mediana de 30. La venta cruzada se apoya en una hipótesis de complementariedad del catálogo. Las cuatro señales públicas tienen entre 65 y 75 puntos y 0 puntos de accionabilidad.",
+    "whyWhatsapp": "Permite consultar de forma individual a Ana Demo, de Clínica Horizonte Demo, si necesita reponer P01. C01 tiene consentimiento comercial válido en el escenario sintético, registrado el 2026-07-01.",
+    "whyInstagram": "El informe carece de señales de audiencia en Instagram que sustenten una campaña para esta recompra individual.",
+    "whyBoth": "Sumar Instagram ampliaría el alcance sin evidencia de que aporte a la consulta de reposición de C01.",
+    "whyNone": "Es la alternativa si la revisión humana detecta que el consentimiento no cubre WhatsApp, que falta disponibilidad o que el borrador requiere ajustes. Con los datos sintéticos aportados, WhatsApp es el canal propuesto para revisión.",
+    "evidenceUsed": [
+      "ORD-001, ORD-002 y ORD-003. Última compra sintética de P01 el 2026-09-20. El intervalo observado supera la mediana histórica en 19 días.",
+      "P01 tiene 120 cajas x100 en stock sintético frente a 12 cajas sugeridas por ARS 102.000 estimados.",
+      "C01 tiene consentimiento comercial sintético válido y la referencia ficticia FICTITIOUS-C01.",
+      "CROSS-C01-P02 obtuvo 80 puntos. ORD-003 y la relación de catálogo sustentan la hipótesis de complementariedad.",
+      "EXT-TDF-289532-P02 obtuvo 75 puntos, el mayor puntaje externo. Los otros avisos obtuvieron 70 (EXT-TDF-274729-P02 y EXT-TDF-280370-P01) y 65 (EXT-TDF-270677-P01).",
+      "El aviso TDF-289532 corresponde a gasas de quirófano para esterilización del Hospital Regional Ushuaia. El informe lo clasifica como histórico y vencido, con coincidencia de familia con P02. [Aviso oficial](https://compras.tierradelfuego.gob.ar/?p=289532)."
+    ],
+    "campaignOutline": "Preparar un borrador individual para Ana Demo, vinculado a FICTITIOUS-C01, que consulte si necesita reponer guantes de nitrilo P01. Usar las 12 cajas x100 y los ARS 102.000 estimados como referencia interna para preparar una cotización. La llamada a la acción sería confirmar cantidad y talles o pedir una cotización. Mantener el flujo original de revisión humana del destinatario, el alcance del consentimiento, el stock, el precio y el texto antes de cualquier aprobación.",
+    "externalRecommendation": {
+      "opportunityId": "EXT-TDF-289532-P02",
+      "channel": "none",
+      "reason": "Es la señal externa mejor puntuada y sirve para investigar requisitos de compra del segmento de esterilización hospitalaria. El informe registra un plazo vencido el 2026-10-09 a las 12:00, hora de Ushuaia. Quedan por verificar la vigencia de un eventual nuevo llamado y la equivalencia técnica con P02. El aviso no acredita un pedido a MEDPULSE.",
+      "verificationRequired": [
+        "Revisar en el portal oficial el estado del expediente y si existe una reapertura o un nuevo llamado. Confirmar el plazo oficial vigente si lo hubiera.",
+        "Obtener el pliego y el renglón para cotejar tipo de gasa, dimensiones, esterilidad, presentación, certificaciones y documentación con la ficha técnica de P02.",
+        "Verificar cantidades, disponibilidad real y condiciones de entrega, incluidos los requisitos logísticos para Ushuaia."
+      ],
+      "conditionalCampaign": "Si se valida el encaje técnico y la capacidad de suministro, proponer una campaña informativa para contactos B2B con consentimiento del segmento de esterilización. Presentar la ficha técnica y la opción de solicitar una cotización, con revisión humana previa. Excluir los datos públicos de contacto del hospital de la lista de destinatarios. Si aparece un llamado abierto y compatible, evaluar la participación por el procedimiento oficial."
+    },
+    "metrics": [
+      "Si se aprueba y ejecuta la campaña interna, registrar entrega, respuesta y solicitud de cotización. Con un solo destinatario, reportar conteos.",
+      "Registrar la cantidad solicitada y las órdenes confirmadas únicamente si se documentan.",
+      "Para la investigación externa, registrar el estado del expediente, los requisitos cotejados y las brechas técnicas o logísticas pendientes."
+    ],
+    "limitations": [
+      "Clientes, consentimiento, compras, stock y precios internos son sintéticos. Los 19 días sobre la mediana son una señal para consultar, y los ARS 102.000 son una estimación del escenario.",
+      "Los puntajes son índices de prioridad definidos por reglas. El componente de stock externo usa datos sintéticos.",
+      "Los avisos públicos son reales y su estado se tomó del informe recibido. La coincidencia de familia y la muestra de una sola provincia son insuficientes para acreditar equivalencia técnica, demanda para MEDPULSE o una tendencia.",
+      "La recomendación queda sujeta al flujo original de revisión y aprobación humana."
+    ]
+  },
+  "originalCampaign": {
+    "id": "32c2756a-91fe-411d-b541-07617d45d78c",
+    "identifier": "MED-6",
+    "status": "in_review",
+    "updatedAt": "2026-11-08T23:15:48.116Z",
+    "unchanged": true,
+    "decisionId": "1114b3b6-d9fa-4d37-a936-f46be9f191b2"
+  },
+  "messagesSent": 0,
+  "approval": "not_granted",
+  "mode": "recommendation_only"
+}

@@ -1,0 +1,991 @@
+{
+  "schema": "medpulse.instagram-discovery.v1",
+  "latest": {
+    "queries": [
+      {
+        "url": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+        "finalUrl": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+        "retrievedAt": "2026-11-09T12:30:07.196Z",
+        "publisher": "Ministerio de Salud de la Nación",
+        "title": "Boletines 2026",
+        "publishedAt": null,
+        "sha256": "9b2f4df7052831575dbab5f46da9ba067085b61c5579d8d2a51688a45cb44663",
+        "file": "ben-index.html"
+      },
+      {
+        "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+        "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+        "retrievedAt": "2026-11-09T12:30:09.207Z",
+        "publisher": "Ministerio de Salud de la Nación",
+        "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+        "publishedAt": "2026-11-04",
+        "sha256": "bdadcaff85a4fbf92505c7f384e1fb44055f8b77dc33dea4ca0013c51421f47a",
+        "file": "ben-summary.html"
+      },
+      {
+        "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+        "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+        "retrievedAt": "2026-11-09T12:30:09.629Z",
+        "publisher": "Ministerio de Salud de la Nación",
+        "title": "Boletín Epidemiológico Nacional 832",
+        "publishedAt": null,
+        "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+        "file": "ben.pdf"
+      },
+      {
+        "url": "https://www.argentina.gob.ar/salud/primerosauxilios",
+        "finalUrl": "https://www.argentina.gob.ar/salud/primerosauxilios",
+        "retrievedAt": "2026-11-09T12:30:10.706Z",
+        "publisher": "Ministerio de Salud de la Nación",
+        "title": "Primeros Auxilios",
+        "publishedAt": null,
+        "sha256": "e924ceb1fe4ad32a273e7c23dcedfce35d35b1795e4490ab2b0597e7289e3007",
+        "file": "first-aid-index.html"
+      },
+      {
+        "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+        "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+        "retrievedAt": "2026-11-09T12:30:13.421Z",
+        "publisher": "Ministerio de Salud de la Nación",
+        "title": "Botiquín de primeros auxilios - DINESA",
+        "publishedAt": null,
+        "sha256": "643968fe7aa67e388d5583832c4513043c6687fe5adcc79edf288ddcda97c6e5",
+        "file": "kit.html"
+      },
+      {
+        "url": "https://www.argentina.gob.ar/salud/noticias",
+        "finalUrl": "https://www.argentina.gob.ar/salud/noticias",
+        "retrievedAt": "2026-11-09T12:30:14.352Z",
+        "publisher": "Ministerio de Salud de la Nación",
+        "title": "Argentina.gob.ar",
+        "publishedAt": "2026-11-06",
+        "sha256": "4418fb2594f43dade7b0cba0b786a39486e9f38dc6bd1bbe6115c8700be1ef16",
+        "file": "news-index.html"
+      },
+      {
+        "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+        "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+        "retrievedAt": "2026-11-09T12:30:14.375Z",
+        "publisher": "Ministerio de Salud de la Nación",
+        "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+        "publishedAt": "2026-11-06",
+        "sha256": "4245b422bb31660561bdc4bc1b5243841874bf9b0aa2ebcd7e994cf97f6aaa94",
+        "file": "news.html"
+      }
+    ],
+    "publications": [
+      {
+        "kind": "ben",
+        "id": "BEN-832",
+        "edition": {
+          "number": 832,
+          "week": 42,
+          "period": "18 al 24 de octubre 2026",
+          "pdf": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf"
+        },
+        "context": {
+          "classification": "contexto_epidemiologico",
+          "signal": "descenso_posinvernal",
+          "interpretation": "El Ministerio describe un descenso de la circulación de virus respiratorios tras los picos invernales.",
+          "demandTrend": "sin evidencia comercial",
+          "reference": "Primer párrafo sobre circulación de virus respiratorios"
+        },
+        "sources": [
+          {
+            "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+            "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+            "retrievedAt": "2026-11-09T12:30:09.207Z",
+            "publisher": "Ministerio de Salud de la Nación",
+            "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+            "publishedAt": "2026-11-04",
+            "sha256": "bdadcaff85a4fbf92505c7f384e1fb44055f8b77dc33dea4ca0013c51421f47a",
+            "file": "ben-summary.html"
+          },
+          {
+            "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+            "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+            "retrievedAt": "2026-11-09T12:30:09.629Z",
+            "publisher": "Ministerio de Salud de la Nación",
+            "title": "Boletín Epidemiológico Nacional 832",
+            "publishedAt": null,
+            "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+            "file": "ben.pdf"
+          }
+        ],
+        "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+        "classification": {
+          "relevant": true,
+          "productId": "P04",
+          "eligible": true,
+          "information": "contexto_epidemiologico",
+          "interestTrend": "no medido",
+          "demandTrend": "sin evidencia comercial"
+        },
+        "campaignKey": "8ee4dc60354022f0f7c1ce5924b1bb1086273208c5563359c250f60015b8a9f2",
+        "approach": "respiratory",
+        "observation": "repeated",
+        "decision": "repeated"
+      },
+      {
+        "kind": "kit",
+        "id": "DINESA-botiquin",
+        "edition": null,
+        "context": {
+          "classification": "guia_sanitaria",
+          "signal": "inventario_botiquin",
+          "interpretation": "La guía oficial incluye gasas entre los elementos del botiquín y recomienda revisar el estado y la reposición de sus insumos.",
+          "demandTrend": "sin evidencia comercial"
+        },
+        "sources": [
+          {
+            "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+            "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+            "retrievedAt": "2026-11-09T12:30:13.421Z",
+            "publisher": "Ministerio de Salud de la Nación",
+            "title": "Botiquín de primeros auxilios - DINESA",
+            "publishedAt": null,
+            "sha256": "643968fe7aa67e388d5583832c4513043c6687fe5adcc79edf288ddcda97c6e5",
+            "file": "kit.html"
+          }
+        ],
+        "sha256": "2dd40186772cd9c6d7b8f66bd81cb12440eb6252cca68a573580c25153ade9fd",
+        "classification": {
+          "relevant": true,
+          "productId": "P02",
+          "eligible": true,
+          "information": "guia_sanitaria",
+          "interestTrend": "no medido",
+          "demandTrend": "sin evidencia comercial"
+        },
+        "campaignKey": "1b623bf004208c998314736e9c9015a699c482901e29225c949c786fb3d54511",
+        "approach": "kit",
+        "observation": "repeated",
+        "decision": "repeated"
+      },
+      {
+        "kind": "news",
+        "id": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+        "sha256": "36b2814cf54f9704d814e6400834e0c9eb62ed5c6e1ca34118fa64060e944185",
+        "sources": [
+          {
+            "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+            "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+            "retrievedAt": "2026-11-09T12:30:14.375Z",
+            "publisher": "Ministerio de Salud de la Nación",
+            "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+            "publishedAt": "2026-11-06",
+            "sha256": "4245b422bb31660561bdc4bc1b5243841874bf9b0aa2ebcd7e994cf97f6aaa94",
+            "file": "news.html"
+          }
+        ],
+        "classification": {
+          "relevant": false,
+          "productId": null,
+          "eligible": false,
+          "information": "noticia_institucional",
+          "interestTrend": "no medido",
+          "demandTrend": "sin evidencia comercial"
+        },
+        "approach": null,
+        "observation": "repeated",
+        "decision": "repeated"
+      }
+    ],
+    "errors": [],
+    "requests": 8,
+    "modelCalls": 0,
+    "taskId": "38b7cf61-0fc4-460c-832d-cc9f8bb13ac7",
+    "identifier": "MED-26",
+    "runId": "5493c9c9-85f3-4d29-a893-49e81e4c36c9",
+    "observedAt": "2026-11-09T12:30:14.381Z",
+    "dispatch": null
+  },
+  "history": [
+    {
+      "queries": [
+        {
+          "url": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "finalUrl": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "retrievedAt": "2026-11-09T03:28:05.861Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Presidencia de la Nación",
+          "publishedAt": null,
+          "sha256": "78d744abebb3f1be55444eececd39537474fd019dd53cd830579078499731af0",
+          "file": "ben-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "retrievedAt": "2026-11-09T03:28:05.890Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Presidencia de la Nación",
+          "publishedAt": "2026-11-04",
+          "sha256": "b778ff7d2bffb7051b09fb38fd51df6557ad8ad233bb9f16a804068c021ec844",
+          "file": "ben-summary.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "retrievedAt": "2026-11-09T03:28:06.331Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Boletín Epidemiológico Nacional 832",
+          "publishedAt": null,
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "file": "ben.pdf"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "finalUrl": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "retrievedAt": "2026-11-09T03:28:06.364Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Presidencia de la Nación",
+          "publishedAt": null,
+          "sha256": "8db8df89f4b103f6118aebece856996f5ada37983866fd492e36aea5c1374840",
+          "file": "first-aid-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+          "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+          "retrievedAt": "2026-11-09T03:28:07.483Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Presidencia de la Nación",
+          "publishedAt": null,
+          "sha256": "b0c3773ba0c6f23216642e830942905c400cb4f13a82a73f966fadf338eb3344",
+          "file": "kit.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/noticias",
+          "finalUrl": "https://www.argentina.gob.ar/salud/noticias",
+          "retrievedAt": "2026-11-09T03:28:07.529Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Presidencia de la Nación",
+          "publishedAt": "2026-11-06",
+          "sha256": "f3fdc413fa6e606557e537006e72e633ef79f9b1522cc02b4c76e3c343503022",
+          "file": "news-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "retrievedAt": "2026-11-09T03:28:07.559Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Presidencia de la Nación",
+          "publishedAt": "2026-11-06",
+          "sha256": "0fb88a2a87271be0c5a7152d9cd5ef30dcd260ceee237f98d7051faabc5faf55",
+          "file": "news.html"
+        }
+      ],
+      "publications": [
+        {
+          "kind": "ben",
+          "id": "BEN-832",
+          "edition": {
+            "number": 832,
+            "week": 42,
+            "period": "18 al 24 de octubre 2026",
+            "pdf": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf"
+          },
+          "context": {
+            "classification": "contexto_epidemiologico",
+            "signal": "descenso_posinvernal",
+            "interpretation": "El Ministerio describe un descenso de la circulación de virus respiratorios tras los picos invernales.",
+            "demandTrend": "sin evidencia comercial",
+            "reference": "Primer párrafo sobre circulación de virus respiratorios"
+          },
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "retrievedAt": "2026-11-09T03:28:05.890Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Presidencia de la Nación",
+              "publishedAt": "2026-11-04",
+              "sha256": "b778ff7d2bffb7051b09fb38fd51df6557ad8ad233bb9f16a804068c021ec844",
+              "file": "ben-summary.html"
+            },
+            {
+              "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "retrievedAt": "2026-11-09T03:28:06.331Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Boletín Epidemiológico Nacional 832",
+              "publishedAt": null,
+              "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+              "file": "ben.pdf"
+            }
+          ],
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "classification": {
+            "relevant": true,
+            "productId": "P04",
+            "eligible": true,
+            "information": "contexto_epidemiologico",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "campaignKey": "8ee4dc60354022f0f7c1ce5924b1bb1086273208c5563359c250f60015b8a9f2",
+          "approach": "respiratory",
+          "observation": "new",
+          "decision": "existing_campaign"
+        },
+        {
+          "kind": "news",
+          "id": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "sha256": "36b2814cf54f9704d814e6400834e0c9eb62ed5c6e1ca34118fa64060e944185",
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "retrievedAt": "2026-11-09T03:28:07.559Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Presidencia de la Nación",
+              "publishedAt": "2026-11-06",
+              "sha256": "0fb88a2a87271be0c5a7152d9cd5ef30dcd260ceee237f98d7051faabc5faf55",
+              "file": "news.html"
+            }
+          ],
+          "classification": {
+            "relevant": false,
+            "productId": null,
+            "eligible": false,
+            "information": "noticia_institucional",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "approach": null,
+          "observation": "new",
+          "decision": "irrelevant"
+        }
+      ],
+      "errors": [
+        {
+          "source": "Primeros auxilios",
+          "message": "El destino no corresponde a la guía"
+        }
+      ],
+      "requests": 8,
+      "modelCalls": 0,
+      "taskId": "5892e588-ac75-4420-92a8-0dbe21da8a4f",
+      "identifier": "MED-17",
+      "runId": "f8133da7-4892-4d10-9974-7c3b566e3305",
+      "observedAt": "2026-11-09T03:28:07.568Z",
+      "dispatch": null
+    },
+    {
+      "queries": [
+        {
+          "url": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "finalUrl": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "retrievedAt": "2026-11-09T03:30:04.479Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Boletines 2026",
+          "publishedAt": null,
+          "sha256": "5162cc05c7f9bb0844f9e869291719344c648ce3c13a005a9df91a342a30955b",
+          "file": "ben-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "retrievedAt": "2026-11-09T03:30:04.506Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+          "publishedAt": "2026-11-04",
+          "sha256": "7cd2678dee11a1f21bb9ab6410cc5e57347c62d68406009870dbb58634e4a202",
+          "file": "ben-summary.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "retrievedAt": "2026-11-09T03:30:04.929Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Boletín Epidemiológico Nacional 832",
+          "publishedAt": null,
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "file": "ben.pdf"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "finalUrl": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "retrievedAt": "2026-11-09T03:30:04.960Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Primeros Auxilios",
+          "publishedAt": null,
+          "sha256": "cf052c9cc936d455d3caf3752fa96906da7afab6a3e64a9f7e173fc27832503f",
+          "file": "first-aid-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+          "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+          "retrievedAt": "2026-11-09T03:30:05.021Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Botiquín de primeros auxilios - DINESA",
+          "publishedAt": null,
+          "sha256": "f586c3c1b431adfea6a6ad8f25ea4bb1c7b0b7c37a724a8eaab5c7c984834674",
+          "file": "kit.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/noticias",
+          "finalUrl": "https://www.argentina.gob.ar/salud/noticias",
+          "retrievedAt": "2026-11-09T03:30:05.084Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Argentina.gob.ar",
+          "publishedAt": "2026-11-06",
+          "sha256": "1774c6c0e802da82ed965e2ea66a280fde1b69a84c626191b38aa6d993812ff1",
+          "file": "news-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "retrievedAt": "2026-11-09T03:30:05.104Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+          "publishedAt": "2026-11-06",
+          "sha256": "32b52f2fd0dd639fb8e7aa5ff76af5b3fedfb02d27472e7c9bd3400143d26d27",
+          "file": "news.html"
+        }
+      ],
+      "publications": [
+        {
+          "kind": "ben",
+          "id": "BEN-832",
+          "edition": {
+            "number": 832,
+            "week": 42,
+            "period": "18 al 24 de octubre 2026",
+            "pdf": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf"
+          },
+          "context": {
+            "classification": "contexto_epidemiologico",
+            "signal": "descenso_posinvernal",
+            "interpretation": "El Ministerio describe un descenso de la circulación de virus respiratorios tras los picos invernales.",
+            "demandTrend": "sin evidencia comercial",
+            "reference": "Primer párrafo sobre circulación de virus respiratorios"
+          },
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "retrievedAt": "2026-11-09T03:30:04.506Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+              "publishedAt": "2026-11-04",
+              "sha256": "7cd2678dee11a1f21bb9ab6410cc5e57347c62d68406009870dbb58634e4a202",
+              "file": "ben-summary.html"
+            },
+            {
+              "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "retrievedAt": "2026-11-09T03:30:04.929Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Boletín Epidemiológico Nacional 832",
+              "publishedAt": null,
+              "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+              "file": "ben.pdf"
+            }
+          ],
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "classification": {
+            "relevant": true,
+            "productId": "P04",
+            "eligible": true,
+            "information": "contexto_epidemiologico",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "campaignKey": "8ee4dc60354022f0f7c1ce5924b1bb1086273208c5563359c250f60015b8a9f2",
+          "approach": "respiratory",
+          "observation": "repeated",
+          "decision": "repeated"
+        },
+        {
+          "kind": "kit",
+          "id": "DINESA-botiquin",
+          "edition": null,
+          "context": {
+            "classification": "guia_sanitaria",
+            "signal": "inventario_botiquin",
+            "interpretation": "La guía oficial incluye gasas entre los elementos del botiquín y recomienda revisar el estado y la reposición de sus insumos.",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+              "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+              "retrievedAt": "2026-11-09T03:30:05.021Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Botiquín de primeros auxilios - DINESA",
+              "publishedAt": null,
+              "sha256": "f586c3c1b431adfea6a6ad8f25ea4bb1c7b0b7c37a724a8eaab5c7c984834674",
+              "file": "kit.html"
+            }
+          ],
+          "sha256": "2dd40186772cd9c6d7b8f66bd81cb12440eb6252cca68a573580c25153ade9fd",
+          "classification": {
+            "relevant": true,
+            "productId": "P02",
+            "eligible": true,
+            "information": "guia_sanitaria",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "campaignKey": "1b623bf004208c998314736e9c9015a699c482901e29225c949c786fb3d54511",
+          "approach": "kit",
+          "observation": "new",
+          "decision": "queued"
+        },
+        {
+          "kind": "news",
+          "id": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "sha256": "36b2814cf54f9704d814e6400834e0c9eb62ed5c6e1ca34118fa64060e944185",
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "retrievedAt": "2026-11-09T03:30:05.104Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+              "publishedAt": "2026-11-06",
+              "sha256": "32b52f2fd0dd639fb8e7aa5ff76af5b3fedfb02d27472e7c9bd3400143d26d27",
+              "file": "news.html"
+            }
+          ],
+          "classification": {
+            "relevant": false,
+            "productId": null,
+            "eligible": false,
+            "information": "noticia_institucional",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "approach": null,
+          "observation": "repeated",
+          "decision": "repeated"
+        }
+      ],
+      "errors": [],
+      "requests": 8,
+      "modelCalls": 0,
+      "taskId": "b58155fc-f87f-4d30-ac41-92e315d5a2b2",
+      "identifier": "MED-18",
+      "runId": "56b85271-ceb1-4a84-9cec-348aaa7944b0",
+      "observedAt": "2026-11-09T03:30:05.109Z",
+      "dispatch": {
+        "research": "MED-19",
+        "researchId": "99414318-c87e-4ba0-ad6a-60c9fd9fabe4",
+        "campaign": "MED-20",
+        "campaignId": "e69a1a49-99d2-4388-b58e-e3e74415d5aa",
+        "discoveryTaskId": "b58155fc-f87f-4d30-ac41-92e315d5a2b2",
+        "campaignKey": "1b623bf004208c998314736e9c9015a699c482901e29225c949c786fb3d54511"
+      }
+    },
+    {
+      "queries": [
+        {
+          "url": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "finalUrl": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "retrievedAt": "2026-11-09T03:30:33.274Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Boletines 2026",
+          "publishedAt": null,
+          "sha256": "20c9eec65f86f688eb020da58faa336de420c28584ec27b03d2155a96ba9965e",
+          "file": "ben-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "retrievedAt": "2026-11-09T03:30:33.309Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+          "publishedAt": "2026-11-04",
+          "sha256": "ac151019754e6f77f6807d6ef0450aae8fa560fc787c5e1d2a77160e1f9aee45",
+          "file": "ben-summary.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "retrievedAt": "2026-11-09T03:30:33.738Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Boletín Epidemiológico Nacional 832",
+          "publishedAt": null,
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "file": "ben.pdf"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "finalUrl": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "retrievedAt": "2026-11-09T03:30:33.782Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Primeros Auxilios",
+          "publishedAt": null,
+          "sha256": "140b69eeec9322ff1827820de687d5664afb6883b7ca33ded3aba958c6105480",
+          "file": "first-aid-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+          "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+          "retrievedAt": "2026-11-09T03:30:33.858Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Botiquín de primeros auxilios - DINESA",
+          "publishedAt": null,
+          "sha256": "9a4be2c029f14b927ac527e8e80f2652a80ea604dea50e2b7b1f1662b2d45313",
+          "file": "kit.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/noticias",
+          "finalUrl": "https://www.argentina.gob.ar/salud/noticias",
+          "retrievedAt": "2026-11-09T03:30:33.899Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Argentina.gob.ar",
+          "publishedAt": "2026-11-06",
+          "sha256": "4f2e5feee8aab8ea88f9b72d04957840fa66a3b8a47d9b1350d127f44fbce563",
+          "file": "news-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "retrievedAt": "2026-11-09T03:30:33.926Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+          "publishedAt": "2026-11-06",
+          "sha256": "ae2653707d7be79fdd1f3bd54718699263dc3089f2dc574cde905587b017ce70",
+          "file": "news.html"
+        }
+      ],
+      "publications": [
+        {
+          "kind": "ben",
+          "id": "BEN-832",
+          "edition": {
+            "number": 832,
+            "week": 42,
+            "period": "18 al 24 de octubre 2026",
+            "pdf": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf"
+          },
+          "context": {
+            "classification": "contexto_epidemiologico",
+            "signal": "descenso_posinvernal",
+            "interpretation": "El Ministerio describe un descenso de la circulación de virus respiratorios tras los picos invernales.",
+            "demandTrend": "sin evidencia comercial",
+            "reference": "Primer párrafo sobre circulación de virus respiratorios"
+          },
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "retrievedAt": "2026-11-09T03:30:33.309Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+              "publishedAt": "2026-11-04",
+              "sha256": "ac151019754e6f77f6807d6ef0450aae8fa560fc787c5e1d2a77160e1f9aee45",
+              "file": "ben-summary.html"
+            },
+            {
+              "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "retrievedAt": "2026-11-09T03:30:33.738Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Boletín Epidemiológico Nacional 832",
+              "publishedAt": null,
+              "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+              "file": "ben.pdf"
+            }
+          ],
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "classification": {
+            "relevant": true,
+            "productId": "P04",
+            "eligible": true,
+            "information": "contexto_epidemiologico",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "campaignKey": "8ee4dc60354022f0f7c1ce5924b1bb1086273208c5563359c250f60015b8a9f2",
+          "approach": "respiratory",
+          "observation": "repeated",
+          "decision": "repeated"
+        },
+        {
+          "kind": "kit",
+          "id": "DINESA-botiquin",
+          "edition": null,
+          "context": {
+            "classification": "guia_sanitaria",
+            "signal": "inventario_botiquin",
+            "interpretation": "La guía oficial incluye gasas entre los elementos del botiquín y recomienda revisar el estado y la reposición de sus insumos.",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+              "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+              "retrievedAt": "2026-11-09T03:30:33.858Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Botiquín de primeros auxilios - DINESA",
+              "publishedAt": null,
+              "sha256": "9a4be2c029f14b927ac527e8e80f2652a80ea604dea50e2b7b1f1662b2d45313",
+              "file": "kit.html"
+            }
+          ],
+          "sha256": "2dd40186772cd9c6d7b8f66bd81cb12440eb6252cca68a573580c25153ade9fd",
+          "classification": {
+            "relevant": true,
+            "productId": "P02",
+            "eligible": true,
+            "information": "guia_sanitaria",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "campaignKey": "1b623bf004208c998314736e9c9015a699c482901e29225c949c786fb3d54511",
+          "approach": "kit",
+          "observation": "repeated",
+          "decision": "repeated"
+        },
+        {
+          "kind": "news",
+          "id": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "sha256": "36b2814cf54f9704d814e6400834e0c9eb62ed5c6e1ca34118fa64060e944185",
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "retrievedAt": "2026-11-09T03:30:33.926Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+              "publishedAt": "2026-11-06",
+              "sha256": "ae2653707d7be79fdd1f3bd54718699263dc3089f2dc574cde905587b017ce70",
+              "file": "news.html"
+            }
+          ],
+          "classification": {
+            "relevant": false,
+            "productId": null,
+            "eligible": false,
+            "information": "noticia_institucional",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "approach": null,
+          "observation": "repeated",
+          "decision": "repeated"
+        }
+      ],
+      "errors": [],
+      "requests": 8,
+      "modelCalls": 0,
+      "taskId": "83705107-cfcd-479b-bb4e-6b4649a3eefe",
+      "identifier": "MED-21",
+      "runId": "4e03dfe8-31b2-42c8-b0e3-2d3bc7517f94",
+      "observedAt": "2026-11-09T03:30:33.930Z",
+      "dispatch": null
+    },
+    {
+      "queries": [
+        {
+          "url": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "finalUrl": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+          "retrievedAt": "2026-11-09T12:30:07.196Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Boletines 2026",
+          "publishedAt": null,
+          "sha256": "9b2f4df7052831575dbab5f46da9ba067085b61c5579d8d2a51688a45cb44663",
+          "file": "ben-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+          "retrievedAt": "2026-11-09T12:30:09.207Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+          "publishedAt": "2026-11-04",
+          "sha256": "bdadcaff85a4fbf92505c7f384e1fb44055f8b77dc33dea4ca0013c51421f47a",
+          "file": "ben-summary.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+          "retrievedAt": "2026-11-09T12:30:09.629Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Boletín Epidemiológico Nacional 832",
+          "publishedAt": null,
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "file": "ben.pdf"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "finalUrl": "https://www.argentina.gob.ar/salud/primerosauxilios",
+          "retrievedAt": "2026-11-09T12:30:10.706Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Primeros Auxilios",
+          "publishedAt": null,
+          "sha256": "e924ceb1fe4ad32a273e7c23dcedfce35d35b1795e4490ab2b0597e7289e3007",
+          "file": "first-aid-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+          "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+          "retrievedAt": "2026-11-09T12:30:13.421Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Botiquín de primeros auxilios - DINESA",
+          "publishedAt": null,
+          "sha256": "643968fe7aa67e388d5583832c4513043c6687fe5adcc79edf288ddcda97c6e5",
+          "file": "kit.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/salud/noticias",
+          "finalUrl": "https://www.argentina.gob.ar/salud/noticias",
+          "retrievedAt": "2026-11-09T12:30:14.352Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "Argentina.gob.ar",
+          "publishedAt": "2026-11-06",
+          "sha256": "4418fb2594f43dade7b0cba0b786a39486e9f38dc6bd1bbe6115c8700be1ef16",
+          "file": "news-index.html"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "retrievedAt": "2026-11-09T12:30:14.375Z",
+          "publisher": "Ministerio de Salud de la Nación",
+          "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+          "publishedAt": "2026-11-06",
+          "sha256": "4245b422bb31660561bdc4bc1b5243841874bf9b0aa2ebcd7e994cf97f6aaa94",
+          "file": "news.html"
+        }
+      ],
+      "publications": [
+        {
+          "kind": "ben",
+          "id": "BEN-832",
+          "edition": {
+            "number": 832,
+            "week": 42,
+            "period": "18 al 24 de octubre 2026",
+            "pdf": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf"
+          },
+          "context": {
+            "classification": "contexto_epidemiologico",
+            "signal": "descenso_posinvernal",
+            "interpretation": "El Ministerio describe un descenso de la circulación de virus respiratorios tras los picos invernales.",
+            "demandTrend": "sin evidencia comercial",
+            "reference": "Primer párrafo sobre circulación de virus respiratorios"
+          },
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+              "retrievedAt": "2026-11-09T12:30:09.207Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Actualización del Boletín Epidemiológico Nacional de la semana N° 42",
+              "publishedAt": "2026-11-04",
+              "sha256": "bdadcaff85a4fbf92505c7f384e1fb44055f8b77dc33dea4ca0013c51421f47a",
+              "file": "ben-summary.html"
+            },
+            {
+              "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+              "retrievedAt": "2026-11-09T12:30:09.629Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Boletín Epidemiológico Nacional 832",
+              "publishedAt": null,
+              "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+              "file": "ben.pdf"
+            }
+          ],
+          "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+          "classification": {
+            "relevant": true,
+            "productId": "P04",
+            "eligible": true,
+            "information": "contexto_epidemiologico",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "campaignKey": "8ee4dc60354022f0f7c1ce5924b1bb1086273208c5563359c250f60015b8a9f2",
+          "approach": "respiratory",
+          "observation": "repeated",
+          "decision": "repeated"
+        },
+        {
+          "kind": "kit",
+          "id": "DINESA-botiquin",
+          "edition": null,
+          "context": {
+            "classification": "guia_sanitaria",
+            "signal": "inventario_botiquin",
+            "interpretation": "La guía oficial incluye gasas entre los elementos del botiquín y recomienda revisar el estado y la reposición de sus insumos.",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/salud/primerosauxilios/botiquin",
+              "finalUrl": "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/botiquin",
+              "retrievedAt": "2026-11-09T12:30:13.421Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "Botiquín de primeros auxilios - DINESA",
+              "publishedAt": null,
+              "sha256": "643968fe7aa67e388d5583832c4513043c6687fe5adcc79edf288ddcda97c6e5",
+              "file": "kit.html"
+            }
+          ],
+          "sha256": "2dd40186772cd9c6d7b8f66bd81cb12440eb6252cca68a573580c25153ade9fd",
+          "classification": {
+            "relevant": true,
+            "productId": "P02",
+            "eligible": true,
+            "information": "guia_sanitaria",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "campaignKey": "1b623bf004208c998314736e9c9015a699c482901e29225c949c786fb3d54511",
+          "approach": "kit",
+          "observation": "repeated",
+          "decision": "repeated"
+        },
+        {
+          "kind": "news",
+          "id": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+          "sha256": "36b2814cf54f9704d814e6400834e0c9eb62ed5c6e1ca34118fa64060e944185",
+          "sources": [
+            {
+              "url": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "finalUrl": "https://www.argentina.gob.ar/noticias/el-ministerio-de-salud-de-la-nacion-actualiza-el-marco-normativo-para-el-reconocimiento-de",
+              "retrievedAt": "2026-11-09T12:30:14.375Z",
+              "publisher": "Ministerio de Salud de la Nación",
+              "title": "El Ministerio de Salud de la Nación actualiza el marco normativo para el reconocimiento de especialidades de salud",
+              "publishedAt": "2026-11-06",
+              "sha256": "4245b422bb31660561bdc4bc1b5243841874bf9b0aa2ebcd7e994cf97f6aaa94",
+              "file": "news.html"
+            }
+          ],
+          "classification": {
+            "relevant": false,
+            "productId": null,
+            "eligible": false,
+            "information": "noticia_institucional",
+            "interestTrend": "no medido",
+            "demandTrend": "sin evidencia comercial"
+          },
+          "approach": null,
+          "observation": "repeated",
+          "decision": "repeated"
+        }
+      ],
+      "errors": [],
+      "requests": 8,
+      "modelCalls": 0,
+      "taskId": "38b7cf61-0fc4-460c-832d-cc9f8bb13ac7",
+      "identifier": "MED-26",
+      "runId": "5493c9c9-85f3-4d29-a893-49e81e4c36c9",
+      "observedAt": "2026-11-09T12:30:14.381Z",
+      "dispatch": null
+    }
+  ],
+  "campaigns": [
+    {
+      "research": "MED-19",
+      "researchId": "99414318-c87e-4ba0-ad6a-60c9fd9fabe4",
+      "campaign": "MED-20",
+      "campaignId": "e69a1a49-99d2-4388-b58e-e3e74415d5aa",
+      "discoveryTaskId": "b58155fc-f87f-4d30-ac41-92e315d5a2b2",
+      "campaignKey": "1b623bf004208c998314736e9c9015a699c482901e29225c949c786fb3d54511"
+    }
+  ]
+}

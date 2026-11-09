@@ -1,0 +1,61 @@
+{
+  "schema": "medpulse.reproduction.v1",
+  "company": "MEDPULSE Reproduccion 20261109-100224",
+  "batch": "f0e18f26-dbf4-4dd2-92ec-55a5c677195c",
+  "startedAt": "2026-11-09T13:02:25.167Z",
+  "finishedAt": "2026-11-09T13:04:13.991Z",
+  "elapsedSeconds": 108.82,
+  "prerequisites": "Paperclip already installed and running; Codex CLI logged in; network to model provider available",
+  "includes": [
+    "company bootstrap",
+    "four agents and four real Codex executions",
+    "human approval gate left pending",
+    "local WhatsApp dry-run adapter receipt linked to source task"
+  ],
+  "excludes": [
+    "Paperclip dependency download and installation",
+    "interactive Codex login",
+    "human review time",
+    "GitHub and Vercel publication"
+  ],
+  "tasks": {
+    "director": "MEDAA-1",
+    "sales": "MEDAA-2",
+    "strategy": "MEDAA-3",
+    "outreach": "MEDAA-4"
+  },
+  "runs": [
+    {
+      "id": "ddff91e1-978c-4dc7-9118-c176a7716272",
+      "status": "succeeded",
+      "exitCode": 0,
+      "durationSeconds": 5
+    },
+    {
+      "id": "493cd20b-d09c-4307-bfd7-f81a8f1585a2",
+      "status": "succeeded",
+      "exitCode": 0,
+      "durationSeconds": 15
+    },
+    {
+      "id": "3588b1c1-835b-4ed1-ad58-6bab10255b1e",
+      "status": "succeeded",
+      "exitCode": 0,
+      "durationSeconds": 22
+    },
+    {
+      "id": "a0233dfa-ae19-4dbf-b6b2-9a902fdcc5df",
+      "status": "succeeded",
+      "exitCode": 0,
+      "durationSeconds": 32
+    },
+    {
+      "id": "d29a58be-681d-498c-8ac4-b60ed555015c",
+      "status": "succeeded",
+      "exitCode": 0,
+      "durationSeconds": 20
+    }
+  ],
+  "approval": "pending_not_granted",
+  "messagesSent": 0
+}

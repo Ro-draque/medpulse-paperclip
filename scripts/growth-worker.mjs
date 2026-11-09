@@ -12,6 +12,21 @@ async function request(route,method='GET',data){return fetch(base+route,{method,
 async function api(route,method='GET',data){const r=await request(route,method,data);const text=await r.text();if(!r.ok)throw Error(`${method} ${route}: ${r.status} ${text}`);return text?JSON.parse(text):null;}
 const me=await api('/api/agents/me');
 const list=await api(`/api/companies/${me.companyId}/issues?assigneeAgentId=${agentId}`);
+const instagramTask=list.find(t=>{
+ if(!['market','strategy'].includes(stage)||!['todo','in_progress'].includes(t.status)||[t.executionRunId,t.checkoutRunId].some(id=>id&&id!==runId))return false;
+ try{const meta=JSON.parse(t.description);return meta.kind==='medpulse-instagram-v1'&&meta.stage===stage;}catch{return false;}
+});
+if(instagramTask&&(instagramTask.executionRunId===runId||instagramTask.checkoutRunId===runId||!list.some(t=>t.executionRunId===runId||t.checkoutRunId===runId))){
+ const {runInstagram}=await import('./instagram-worker.mjs');
+ await runInstagram({task:instagramTask,meta:JSON.parse(instagramTask.description),api,request,me,runId,root,agentId});
+ process.exit(0);
+}
+if(stage==='market'&&list.some(t=>['todo','in_progress'].includes(t.status)&&t.description?.includes('MEDPULSE_MARKET_MONITOR_V1')&&(t.executionRunId===runId||t.checkoutRunId===runId||!t.executionRunId&&!t.checkoutRunId))){
+ await import('./market-monitor-worker.mjs');process.exit(0);
+}
+if(list.some(t=>{try{return ['todo','in_progress'].includes(t.status)&&JSON.parse(t.description).kind==='medpulse-market-v1'}catch{return false}})){
+ await import('./market-worker.mjs');process.exit(0);
+}
 if(stage==='outreach'&&list.some(t=>{try{return ['todo','in_progress'].includes(t.status)&&JSON.parse(t.description).kind==='medpulse-whatsapp-dry-run-v1'}catch{return false}})){
  await import('./whatsapp-dry-run-worker.mjs');process.exit(0);
 }

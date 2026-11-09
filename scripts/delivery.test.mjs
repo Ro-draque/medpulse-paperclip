@@ -15,3 +15,17 @@ test('La exportación pública no contiene credenciales, emails o rutas de usuar
 test('Vercel despliega únicamente el directorio estático',async()=>{
  const v=JSON.parse(await fs.readFile(new URL('../vercel.json',import.meta.url),'utf8'));assert.equal(v.outputDirectory,'dist/dashboard');assert.equal(v.buildCommand,'node scripts/build-dashboard.mjs');assert.equal(Object.keys(JSON.parse(await fs.readFile(new URL('../package.json',import.meta.url),'utf8')).dependencies||{}).length,0);
 });
+test('La segunda demo exporta el handoff real, los plazos históricos y puntajes verificables',async()=>{
+ const market=JSON.parse(await fs.readFile(new URL('../dashboard/data/market.json',import.meta.url),'utf8'));
+ assert.equal(market.agents.length,5);assert.equal(market.tasks.length,3);
+ for(const t of market.tasks)assert.ok(market.runs.some(r=>r.id===t.runId&&r.taskId===t.id&&r.status==='succeeded'));
+ assert.ok(market.runs.some(r=>r.status==='failed'&&r.taskId===market.tasks.find(t=>t.stage==='sales').id));
+ assert.equal(market.originalCampaign.id,d.tasks.find(t=>t.stage==='outreach').id);
+ assert.equal(market.messagesSent,0);assert.equal(market.approval,'not_granted');
+ const ext=market.opportunities.filter(o=>o.origin==='external');assert.equal(ext.length,market.source.records);
+ for(const o of market.opportunities){
+  assert.equal(o.score.total,Object.values(o.score.components).reduce((a,b)=>a+b,0));assert.equal(o.score.notProbability,true);
+  if(o.origin==='external'){assert.equal(o.classification.openTenderVerified,false);assert.equal(o.score.components.actionability,0);assert.match(o.sources[0].evidenceSha256,/^[a-f0-9]{64}$/);assert.equal(new URL(o.sources[0].url).hostname,'compras.tierradelfuego.gob.ar');}
+ }
+ assert.ok(ext.some(o=>o.classification.status==='historical_expired'&&o.classification.deadline.date<market.source.asOf));assert.equal(market.decision.externalRecommendation.channel,'none');
+});

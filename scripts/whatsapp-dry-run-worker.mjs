@@ -5,8 +5,11 @@ if(!runId||!agentId||!process.env.PAPERCLIP_API_KEY)throw Error('Paperclip execu
 const headers={Authorization:`Bearer ${process.env.PAPERCLIP_API_KEY}`,'X-Paperclip-Run-Id':runId};
 async function api(route,method='GET',data){const r=await fetch(base+route,{method,headers:{...headers,'Content-Type':'application/json'},body:data===undefined?undefined:JSON.stringify(data)});if(!r.ok)throw Error(`${r.status} ${await r.text()}`);return r.json();}
 const me=await api('/api/agents/me'),tasks=await api(`/api/companies/${me.companyId}/issues?assigneeAgentId=${agentId}`);
-const task=tasks.find(t=>{try{return ['todo','in_progress'].includes(t.status)&&JSON.parse(t.description).kind==='medpulse-whatsapp-dry-run-v1'}catch{return false}});if(!task)throw Error('No handoff task');
-const meta=JSON.parse(task.description);await api(`/api/issues/${task.id}/checkout`,'POST',{agentId,expectedStatuses:['todo','in_progress']});
+const task=tasks.find(t=>{try{return ['todo','in_progress'].includes(t.status)&&[t.executionRunId,t.checkoutRunId].every(id=>!id||id===runId)&&JSON.parse(t.description).kind==='medpulse-whatsapp-dry-run-v1'}catch{return false}});if(!task)throw Error('No handoff task');
+const meta=JSON.parse(task.description);
+const current=await api('/api/issues/'+task.id);
+if([current.executionRunId,current.checkoutRunId].some(id=>id&&id!==runId))throw Error('Another run owns the task');
+if(current.executionRunId!==runId&&current.checkoutRunId!==runId)await api(`/api/issues/${task.id}/checkout`,'POST',{agentId,expectedStatuses:['todo','in_progress']});
 const source=await api(`/api/issues/${meta.sourceTaskId}`),doc=await api(`/api/issues/${meta.sourceTaskId}/documents/result`),campaign=unwrapDocument(doc);
 if(campaign.mode!=='dry_run'||campaign.messages_sent!==0||campaign.payload?.sendable!==false||campaign.recipient.phone!==null||campaign.payload.request_draft.to!=='<FICTIONAL_RECIPIENT_NOT_SENDABLE>')throw Error('Only fictional non-sendable dry runs accepted');
 const request=campaign.payload.request_draft;
@@ -14,8 +17,19 @@ if(request.messaging_product!=='whatsapp'||request.type!=='text'||!request.text.
 if(!campaign.recipient.consent.valid||campaign.product.stock<campaign.product.quantity)throw Error('Commercial constraints failed');
 const receipt={schema:'medpulse.whatsapp-dry-run-receipt.v1',receiptId:`dry-run:${runId}`,taskId:task.id,taskIdentifier:task.identifier,sourceTaskId:source.id,sourceIdentifier:source.identifier,sourceDocumentRevisionId:doc.latestRevisionId,sourceCampaignHash:hash(campaign),requestHash:hash(request),agentId,paperclipRunId:runId,executedAt:new Date().toISOString(),adapter:'local-whatsapp-dry-run',action:'validate_and_record_handoff',outcome:'dry_run_validated_not_sent',validation:{payloadMatchesDraft:true,fictionalRecipient:true,commercialConsentRecorded:true,stockSufficient:true},sourceApprovalAtExecution:{status:source.status,state:source.executionState?.status??null,lastOutcome:source.executionState?.lastDecisionOutcome??null},transport:{networkRequestsToMeta:0,messagesSent:0,providerMessageId:null,sendable:false},limitations:['Validación local del handoff; no validación ni entrega por Meta','Sin número real ni remitente configurado','El consentimiento comercial sintético no especifica alcance WhatsApp','Un envío real requeriría autorización explícita y configuración de plantillas/ventana aplicable']};
 const dir=path.join('evidence/growth',meta.batch,'handoff',runId);await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'receipt.json'),JSON.stringify(receipt,null,2));
+const sandbox=meta.transport==='local_http_sandbox';
+if(sandbox){
+ const {runSandboxCases}=await import('./whatsapp-http-sandbox.mjs');
+ receipt.http=await runSandboxCases(request,doc.latestRevisionId,path.join('evidence','whatsapp-http-sandbox','ledger'));
+ receipt.outcome='local_http_sandbox_validated_not_sent';
+ receipt.action='validate_and_execute_local_http_handoff';
+ receipt.transport.localHttpRequests=receipt.http.cases.length;
+ await fs.writeFile(path.join(dir,'receipt.json'),JSON.stringify(receipt,null,2));
+}
 await api(`/api/issues/${task.id}/documents/receipt`,'PUT',{title:`Recibo ejecutado — ${source.identifier} → ${task.identifier}`,format:'markdown',body:'```json\n'+JSON.stringify(receipt,null,2)+'\n```'});
 const form=new FormData();form.append('file',new Blob([JSON.stringify(receipt,null,2)],{type:'application/json'}),'whatsapp-dry-run-receipt.json');
 const upload=await fetch(`${base}/api/companies/${me.companyId}/issues/${task.id}/attachments`,{method:'POST',headers,body:form});if(!upload.ok)throw Error(`Receipt attachment ${upload.status}`);
-await api(`/api/issues/${task.id}/comments`,'POST',{body:`Handoff ejecutado desde ${source.identifier}. Adaptador local validó el payload y registró recibo ${receipt.receiptId}. Run ${runId}; revisión fuente ${doc.latestRevisionId}. Cero llamadas a Meta, cero envíos. Documento receipt y JSON adjunto. No se aprobó la campaña.`});
-await api(`/api/issues/${task.id}`,'PATCH',{status:'done'});await fs.writeFile('evidence/latest-handoff.json',JSON.stringify({batch:meta.batch,taskId:task.id,runId,directory:dir},null,2));console.log(JSON.stringify(receipt));
+await api(`/api/issues/${task.id}/comments`,'POST',{body:`Handoff ejecutado desde ${source.identifier}. ${sandbox?'Sandbox HTTP local: cuatro solicitudes y respuesta con ID simulado.':'Validación local del payload.'} Recibo ${receipt.receiptId}, run ${runId}, revisión fuente ${doc.latestRevisionId}. Cero llamadas a Meta y cero envíos.`});
+await api(`/api/issues/${task.id}`,'PATCH',{status:'done'});
+await fs.writeFile(sandbox?'evidence/latest-http-handoff.json':'evidence/latest-handoff.json',JSON.stringify({batch:meta.batch,taskId:task.id,runId,directory:dir},null,2));
+console.log(JSON.stringify(receipt));

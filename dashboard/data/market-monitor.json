@@ -1,0 +1,600 @@
+{
+  "observedAt": "2026-11-09T12:00:15.958Z",
+  "asOf": "2026-11-09",
+  "sources": [
+    {
+      "id": "tdf",
+      "name": "Compras de Tierra del Fuego",
+      "url": "https://compras.tierradelfuego.gob.ar/",
+      "reason": "Portal provincial de compras. El enlace y la respuesta deben permanecer en el dominio oficial.",
+      "status": "ok",
+      "errors": 0,
+      "error": null,
+      "matches": 8,
+      "requests": 15
+    },
+    {
+      "id": "sf",
+      "name": "Boletín Oficial de Santa Fe",
+      "url": "https://www.santafe.gob.ar/boletinoficial/",
+      "reason": "Publicación oficial provincial. El índice oficial enlaza la sección Licitaciones de la edición.",
+      "status": "ok",
+      "errors": 0,
+      "error": null,
+      "matches": 0,
+      "requests": 6
+    }
+  ],
+  "counts": {
+    "new": 0,
+    "updates": 0,
+    "corrections": 0,
+    "duplicates": 8
+  },
+  "notices": [
+    {
+      "sourceId": "tdf",
+      "id": "TDF-280370",
+      "issuer": "Hospital Regional Ushuaia",
+      "publishedAt": "2026-07-21",
+      "expediente": "MS-64111-2026",
+      "key": "exp:MS-64111-2026",
+      "event": "notice",
+      "deadline": {
+        "date": "2026-07-24",
+        "time": "12:00",
+        "zone": "America/Argentina/Ushuaia"
+      },
+      "products": [
+        "P01"
+      ],
+      "documents": [],
+      "evidence": {
+        "url": "https://compras.tierradelfuego.gob.ar/?p=280370",
+        "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=280370",
+        "sha256": "f800e6b52d71a7358524a144515f326f49a71d99c0dcaedd9751ea69a35bb3f4",
+        "file": "f800e6b52d71a7358524a144515f326f49a71d99c0dcaedd9751ea69a35bb3f4.html",
+        "retrievedAt": "2026-11-09T02:43:51.345Z"
+      },
+      "trust": {
+        "provenance": "official_primary_publication",
+        "domainVerified": true,
+        "issuerIdentified": true,
+        "corroborated": false
+      },
+      "commercial": {
+        "level": "research_only",
+        "reason": "Coincidencia de catálogo. Verificar especificaciones, expediente y capacidad antes de decidir.",
+        "contactAllowed": false,
+        "investmentAllowed": false
+      },
+      "observedAt": "2026-11-09T02:43:45.087Z",
+      "revision": "702643e955d36fd8e43fb35521a4a8aa3a065ea41e20fa500850fa1fbdc7075f",
+      "status": "historical_expired",
+      "versionCount": 1,
+      "firstSeenAt": "2026-11-09T02:43:45.087Z",
+      "lastSeenAt": "2026-11-09T12:00:15.958Z"
+    },
+    {
+      "sourceId": "tdf",
+      "id": "TDF-270677",
+      "issuer": "Secretaría de Pesca y Acuicultura",
+      "publishedAt": "2026-04-20",
+      "expediente": "MPA-E-26487-2026",
+      "key": "exp:MPA-E-26487-2026",
+      "event": "notice",
+      "deadline": {
+        "date": "2026-04-23",
+        "time": "09:59",
+        "zone": "America/Argentina/Ushuaia"
+      },
+      "products": [
+        "P01"
+      ],
+      "documents": [
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/formulario-de-cotizacion-nro-47-ejer-2026-raf-560.pdf",
+          "verification": "downloaded_pdf",
+          "finalUrl": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/formulario-de-cotizacion-nro-47-ejer-2026-raf-560.pdf",
+          "sha256": "84da9fa21ea1f4bfb496c9aae1d86fcdb6f680a50bfac91d33e871509697d3d2",
+          "file": "84da9fa21ea1f4bfb496c9aae1d86fcdb6f680a50bfac91d33e871509697d3d2.pdf"
+        },
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/resolucion-ss.c.a.-n-48-2026-expte-26487-26-adquisicion-de-guantes-de-nitrilo-direccion-de-laboratorio-de-toxina-y-microbiologia-spa.pdf",
+          "verification": "downloaded_pdf",
+          "finalUrl": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/resolucion-ss.c.a.-n-48-2026-expte-26487-26-adquisicion-de-guantes-de-nitrilo-direccion-de-laboratorio-de-toxina-y-microbiologia-spa.pdf",
+          "sha256": "556fb026584678adc7a3c8b2dfb9862a6f3b2ae9d34a0d737c4db4d4469a54bd",
+          "file": "556fb026584678adc7a3c8b2dfb9862a6f3b2ae9d34a0d737c4db4d4469a54bd.pdf"
+        }
+      ],
+      "evidence": {
+        "url": "https://compras.tierradelfuego.gob.ar/?p=270677",
+        "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=270677",
+        "sha256": "e623e2e2dcef28a1edf6220e587f0e614abb6f8193e8047d738862e43a6228b3",
+        "file": "e623e2e2dcef28a1edf6220e587f0e614abb6f8193e8047d738862e43a6228b3.html",
+        "retrievedAt": "2026-11-09T02:43:52.277Z"
+      },
+      "trust": {
+        "provenance": "official_primary_publication",
+        "domainVerified": true,
+        "issuerIdentified": true,
+        "corroborated": false
+      },
+      "commercial": {
+        "level": "research_only",
+        "reason": "Coincidencia de catálogo. Verificar especificaciones, expediente y capacidad antes de decidir.",
+        "contactAllowed": false,
+        "investmentAllowed": false
+      },
+      "observedAt": "2026-11-09T02:43:45.087Z",
+      "revision": "919bb8dd97aa0e50cf9d7f5b725516525e63659930098e49bd44be22e4fd8252",
+      "status": "historical_expired",
+      "versionCount": 1,
+      "firstSeenAt": "2026-11-09T02:43:45.087Z",
+      "lastSeenAt": "2026-11-09T12:00:15.958Z"
+    },
+    {
+      "sourceId": "tdf",
+      "id": "TDF-289532",
+      "issuer": "HOSPITAL REGIONAL USHUAIA",
+      "publishedAt": "2026-10-06",
+      "expediente": "MS-77392-2026",
+      "key": "exp:MS-77392-2026",
+      "event": "notice",
+      "deadline": {
+        "date": "2026-10-09",
+        "time": "12:00",
+        "zone": "America/Argentina/Ushuaia"
+      },
+      "products": [
+        "P02"
+      ],
+      "documents": [
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/10/disposicion-hru-n1168.pdf",
+          "verification": "referenced_only"
+        },
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/10/formulario-de-cotizacion-firmado-cdn97-2026.pdf",
+          "verification": "referenced_only"
+        }
+      ],
+      "evidence": {
+        "url": "https://compras.tierradelfuego.gob.ar/?p=289532",
+        "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=289532",
+        "sha256": "6599f8a392cabd9bf06a01546223280222ddbb6dc02c4a846e49ab86d99119cc",
+        "file": "6599f8a392cabd9bf06a01546223280222ddbb6dc02c4a846e49ab86d99119cc.html",
+        "retrievedAt": "2026-11-09T02:43:58.819Z"
+      },
+      "trust": {
+        "provenance": "official_primary_publication",
+        "domainVerified": true,
+        "issuerIdentified": true,
+        "corroborated": false
+      },
+      "commercial": {
+        "level": "research_only",
+        "reason": "Coincidencia de catálogo. Verificar especificaciones, expediente y capacidad antes de decidir.",
+        "contactAllowed": false,
+        "investmentAllowed": false
+      },
+      "observedAt": "2026-11-09T02:43:45.087Z",
+      "revision": "eca1914f3bdc8a9d896eb7b738402c81bbec25e6a22490c369b9a604c29010b8",
+      "status": "historical_expired",
+      "versionCount": 1,
+      "firstSeenAt": "2026-11-09T02:43:45.087Z",
+      "lastSeenAt": "2026-11-09T12:00:15.958Z"
+    },
+    {
+      "sourceId": "tdf",
+      "id": "TDF-274729",
+      "issuer": "Hospital Regional Ushuaia",
+      "publishedAt": "2026-05-28",
+      "expediente": "MS-E-36691-2026",
+      "key": "exp:MS-E-36691-2026",
+      "event": "correction",
+      "deadline": null,
+      "products": [
+        "P02"
+      ],
+      "documents": [
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/05/rectifica-informe-preadjudicacion.pdf",
+          "verification": "referenced_only"
+        },
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/05/planilla-comparativa.pdf",
+          "verification": "referenced_only"
+        }
+      ],
+      "evidence": {
+        "url": "https://compras.tierradelfuego.gob.ar/?p=274729",
+        "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=274729",
+        "sha256": "4c215b93d704fbb4ab24325803fa348bd9d18ec92b079b6cb7441cb9e8540ac4",
+        "file": "4c215b93d704fbb4ab24325803fa348bd9d18ec92b079b6cb7441cb9e8540ac4.html",
+        "retrievedAt": "2026-11-09T02:43:59.811Z"
+      },
+      "trust": {
+        "provenance": "official_primary_publication",
+        "domainVerified": true,
+        "issuerIdentified": true,
+        "corroborated": false
+      },
+      "commercial": {
+        "level": "research_only",
+        "reason": "Coincidencia de catálogo. Verificar especificaciones, expediente y capacidad antes de decidir.",
+        "contactAllowed": false,
+        "investmentAllowed": false
+      },
+      "observedAt": "2026-11-09T02:43:45.087Z",
+      "revision": "1afc22ff4ff2c549d0409bec09203c2e1b95ee4cc1ae7067d51d688badd6b590",
+      "status": "historical_award",
+      "versionCount": 1,
+      "firstSeenAt": "2026-11-09T02:43:45.087Z",
+      "lastSeenAt": "2026-11-09T12:00:15.958Z"
+    },
+    {
+      "sourceId": "tdf",
+      "id": "TDF-251796",
+      "issuer": "HOSPITAL REGIONAL USHUAIA",
+      "publishedAt": "2025-09-09",
+      "expediente": "MS-E-77828-2025",
+      "key": "exp:MS-E-77828-2025",
+      "event": "award",
+      "deadline": null,
+      "products": [
+        "P03"
+      ],
+      "documents": [
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2025/09/disp-hru-n-1170-2025.pdf",
+          "verification": "referenced_only"
+        }
+      ],
+      "evidence": {
+        "url": "https://compras.tierradelfuego.gob.ar/?p=251796",
+        "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=251796",
+        "sha256": "aa952e3b2e7286ddfbfe9c5ef3c05ed57d2aab1b779225d49f36fcc14e393f88",
+        "file": "aa952e3b2e7286ddfbfe9c5ef3c05ed57d2aab1b779225d49f36fcc14e393f88.html",
+        "retrievedAt": "2026-11-09T02:44:05.116Z"
+      },
+      "trust": {
+        "provenance": "official_primary_publication",
+        "domainVerified": true,
+        "issuerIdentified": true,
+        "corroborated": false
+      },
+      "commercial": {
+        "level": "research_only",
+        "reason": "Coincidencia de catálogo. Verificar especificaciones, expediente y capacidad antes de decidir.",
+        "contactAllowed": false,
+        "investmentAllowed": false
+      },
+      "observedAt": "2026-11-09T02:43:45.087Z",
+      "revision": "808e604d6b59be0f39b9660ec552f64879e77f45df9ec57d9ae81298e15b1b87",
+      "status": "historical_award",
+      "versionCount": 2,
+      "firstSeenAt": "2026-11-09T02:43:45.087Z",
+      "lastSeenAt": "2026-11-09T12:00:15.958Z"
+    },
+    {
+      "sourceId": "tdf",
+      "id": "TDF-109440",
+      "issuer": "HOSPITAL REGIONAL USHUAIA",
+      "publishedAt": "2022-05-16",
+      "expediente": null,
+      "key": "process:hospital regional ushuaia:compra directa 07/2022",
+      "event": "award",
+      "deadline": null,
+      "products": [
+        "P03",
+        "P04"
+      ],
+      "documents": [
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2022/05/DISP-HRU-N%C2%B0-326-2022.pdf",
+          "verification": "referenced_only"
+        }
+      ],
+      "evidence": {
+        "url": "https://compras.tierradelfuego.gob.ar/?p=109440",
+        "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=109440",
+        "sha256": "2e1f8ae5b33e71b4e56b166b8976169935811a681a4313bced5d3b568e284c2a",
+        "file": "2e1f8ae5b33e71b4e56b166b8976169935811a681a4313bced5d3b568e284c2a.html",
+        "retrievedAt": "2026-11-09T02:44:11.294Z"
+      },
+      "trust": {
+        "provenance": "official_primary_publication",
+        "domainVerified": true,
+        "issuerIdentified": true,
+        "corroborated": false
+      },
+      "commercial": {
+        "level": "research_only",
+        "reason": "Coincidencia de catálogo. Verificar especificaciones, expediente y capacidad antes de decidir.",
+        "contactAllowed": false,
+        "investmentAllowed": false
+      },
+      "observedAt": "2026-11-09T02:43:45.087Z",
+      "revision": "3cdb78ced33a77031f91c601322edc5281748fa7d8a578c2de01e97633052a2b",
+      "status": "historical_award",
+      "versionCount": 1,
+      "firstSeenAt": "2026-11-09T02:43:45.087Z",
+      "lastSeenAt": "2026-11-09T12:00:15.958Z"
+    },
+    {
+      "sourceId": "tdf",
+      "id": "TDF-104212",
+      "issuer": "Hospital Regional Ushuaia",
+      "publishedAt": "2022-04-04",
+      "expediente": null,
+      "key": "notice:TDF-104212",
+      "event": "award",
+      "deadline": null,
+      "products": [
+        "P03",
+        "P04"
+      ],
+      "documents": [
+        {
+          "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2022/04/DISP-HRU-N%C2%B0-196-2022.pdf",
+          "verification": "referenced_only"
+        }
+      ],
+      "evidence": {
+        "url": "https://compras.tierradelfuego.gob.ar/?p=104212",
+        "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=104212",
+        "sha256": "5ad700344ad1ee974aecb4b1111357778f9f74bbe3c394466d8409ddb19008fe",
+        "file": "5ad700344ad1ee974aecb4b1111357778f9f74bbe3c394466d8409ddb19008fe.html",
+        "retrievedAt": "2026-11-09T02:44:12.155Z"
+      },
+      "trust": {
+        "provenance": "official_primary_publication",
+        "domainVerified": true,
+        "issuerIdentified": true,
+        "corroborated": false
+      },
+      "commercial": {
+        "level": "research_only",
+        "reason": "Coincidencia de catálogo. Verificar especificaciones, expediente y capacidad antes de decidir.",
+        "contactAllowed": false,
+        "investmentAllowed": false
+      },
+      "observedAt": "2026-11-09T02:43:45.087Z",
+      "revision": "44808e9ecd3118551b4e653e7481d46e7f08c20c8e14079d93b1800a350adcf0",
+      "status": "historical_award",
+      "versionCount": 1,
+      "firstSeenAt": "2026-11-09T02:43:45.087Z",
+      "lastSeenAt": "2026-11-09T12:00:15.958Z"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/robots.txt",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/robots.txt",
+      "redirects": [],
+      "at": "2026-11-09T12:00:16.961Z",
+      "status": 200,
+      "sha256": "8fa3036c68bfcbd32365f6225d24333264093b7cd38d306e106b4dbdc934fd5b",
+      "file": "8fa3036c68bfcbd32365f6225d24333264093b7cd38d306e106b4dbdc934fd5b.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?s=guantes%20de%20nitrilo",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?s=guantes%20de%20nitrilo",
+      "redirects": [],
+      "at": "2026-11-09T12:00:21.696Z",
+      "status": 200,
+      "sha256": "1de8d8d4b458af900ae6d99e1352892c8afcf5924f12b3d838204416f352dbbf",
+      "file": "1de8d8d4b458af900ae6d99e1352892c8afcf5924f12b3d838204416f352dbbf.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=280370",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=280370",
+      "redirects": [],
+      "at": "2026-11-09T12:00:22.618Z",
+      "status": 200,
+      "sha256": "e01c3de676a01d8f4663760d2d3a547fcc004c3add1cfe90d48555aaccecb66b",
+      "file": "e01c3de676a01d8f4663760d2d3a547fcc004c3add1cfe90d48555aaccecb66b.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=270677",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=270677",
+      "redirects": [],
+      "at": "2026-11-09T12:00:23.590Z",
+      "status": 200,
+      "sha256": "715cb1469943701e31c100a0be423bbe8b663cb83c0ae348f19b5586c51df81f",
+      "file": "715cb1469943701e31c100a0be423bbe8b663cb83c0ae348f19b5586c51df81f.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/formulario-de-cotizacion-nro-47-ejer-2026-raf-560.pdf",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/formulario-de-cotizacion-nro-47-ejer-2026-raf-560.pdf",
+      "redirects": [],
+      "at": "2026-11-09T12:00:23.766Z",
+      "status": 200,
+      "sha256": "84da9fa21ea1f4bfb496c9aae1d86fcdb6f680a50bfac91d33e871509697d3d2",
+      "file": "84da9fa21ea1f4bfb496c9aae1d86fcdb6f680a50bfac91d33e871509697d3d2.pdf"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/resolucion-ss.c.a.-n-48-2026-expte-26487-26-adquisicion-de-guantes-de-nitrilo-direccion-de-laboratorio-de-toxina-y-microbiologia-spa.pdf",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/wp-content/uploads/2026/04/resolucion-ss.c.a.-n-48-2026-expte-26487-26-adquisicion-de-guantes-de-nitrilo-direccion-de-laboratorio-de-toxina-y-microbiologia-spa.pdf",
+      "redirects": [],
+      "at": "2026-11-09T12:00:23.979Z",
+      "status": 200,
+      "sha256": "556fb026584678adc7a3c8b2dfb9862a6f3b2ae9d34a0d737c4db4d4469a54bd",
+      "file": "556fb026584678adc7a3c8b2dfb9862a6f3b2ae9d34a0d737c4db4d4469a54bd.pdf"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?s=gasas",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?s=gasas",
+      "redirects": [],
+      "at": "2026-11-09T12:00:28.571Z",
+      "status": 200,
+      "sha256": "e09860d0074fbfd94a659fadf6de2c2a74a95d94a6f08158f1cf8bc85146596c",
+      "file": "e09860d0074fbfd94a659fadf6de2c2a74a95d94a6f08158f1cf8bc85146596c.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=289532",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=289532",
+      "redirects": [],
+      "at": "2026-11-09T12:00:29.445Z",
+      "status": 200,
+      "sha256": "9757cbe2aac7380d84ff2b2bf569880d7751904113941a20a7111568599e9368",
+      "file": "9757cbe2aac7380d84ff2b2bf569880d7751904113941a20a7111568599e9368.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=274729",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=274729",
+      "redirects": [],
+      "at": "2026-11-09T12:00:30.418Z",
+      "status": 200,
+      "sha256": "d42af069b4c5863cbd2fcf14aef16569793ac512b1489b12921e50423851787d",
+      "file": "d42af069b4c5863cbd2fcf14aef16569793ac512b1489b12921e50423851787d.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?s=jeringas",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?s=jeringas",
+      "redirects": [],
+      "at": "2026-11-09T12:00:34.737Z",
+      "status": 200,
+      "sha256": "a29f62e1380dbe8d9095985c111cd7e2d3a7e947c469a30be0e515f5929a2864",
+      "file": "a29f62e1380dbe8d9095985c111cd7e2d3a7e947c469a30be0e515f5929a2864.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=251796",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=251796",
+      "redirects": [],
+      "at": "2026-11-09T12:00:35.629Z",
+      "status": 200,
+      "sha256": "20edf9f49a7aef25de0e2415938505ee2a47dd55347e3be044248d0b6478cfeb",
+      "file": "20edf9f49a7aef25de0e2415938505ee2a47dd55347e3be044248d0b6478cfeb.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=250291",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=250291",
+      "redirects": [],
+      "at": "2026-11-09T12:00:36.551Z",
+      "status": 200,
+      "sha256": "8647c34114d6ce82795811fef7517196ded424320e651efa2908777d2479a0e8",
+      "file": "8647c34114d6ce82795811fef7517196ded424320e651efa2908777d2479a0e8.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?s=barbijos",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?s=barbijos",
+      "redirects": [],
+      "at": "2026-11-09T12:00:41.163Z",
+      "status": 200,
+      "sha256": "4c426eb89bfcb2ed392f092954ef08869f946d8e6dd2a7dcb1c2cb323767a628",
+      "file": "4c426eb89bfcb2ed392f092954ef08869f946d8e6dd2a7dcb1c2cb323767a628.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=109440",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=109440",
+      "redirects": [],
+      "at": "2026-11-09T12:00:42.129Z",
+      "status": 200,
+      "sha256": "c33d760c060967bb83423aa6bf2912506ee410e12665f2844d10c544e5264e50",
+      "file": "c33d760c060967bb83423aa6bf2912506ee410e12665f2844d10c544e5264e50.html"
+    },
+    {
+      "url": "https://compras.tierradelfuego.gob.ar/?p=104212",
+      "finalUrl": "https://compras.tierradelfuego.gob.ar/?p=104212",
+      "redirects": [],
+      "at": "2026-11-09T12:00:43.206Z",
+      "status": 200,
+      "sha256": "48defa0a583bc217f3e2c9f7054149b5dd394bc4e781184e8449e460e46aa6bb",
+      "file": "48defa0a583bc217f3e2c9f7054149b5dd394bc4e781184e8449e460e46aa6bb.html"
+    },
+    {
+      "url": "https://www.santafe.gob.ar/robots.txt",
+      "finalUrl": "https://www.santafe.gob.ar/robots.txt",
+      "redirects": [],
+      "at": "2026-11-09T12:00:43.535Z",
+      "status": 404
+    },
+    {
+      "url": "https://www.santafe.gob.ar/boletinoficial/",
+      "finalUrl": "https://www.santafe.gob.ar/boletinoficial/",
+      "redirects": [],
+      "at": "2026-11-09T12:00:43.661Z",
+      "status": 200,
+      "sha256": "9e17de94826c61b8cb198dc2032352d4f749b1740bd25446a10d2e4df03cd412",
+      "file": "9e17de94826c61b8cb198dc2032352d4f749b1740bd25446a10d2e4df03cd412.html"
+    },
+    {
+      "url": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-06licitaciones.html",
+      "finalUrl": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-06licitaciones.html",
+      "redirects": [],
+      "at": "2026-11-09T12:00:43.739Z",
+      "status": 200,
+      "sha256": "0c8993bf6694b01e0b126789cf3d1899ba915f4a071fa6a9e64d1106bac12b2a",
+      "file": "0c8993bf6694b01e0b126789cf3d1899ba915f4a071fa6a9e64d1106bac12b2a.html"
+    },
+    {
+      "url": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-05licitaciones.html",
+      "finalUrl": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-05licitaciones.html",
+      "redirects": [],
+      "at": "2026-11-09T12:00:43.796Z",
+      "status": 200,
+      "sha256": "1e13d59e8427e9af91b894859124d3a7965ac2b58bbc90ab2d36ef167610deac",
+      "file": "1e13d59e8427e9af91b894859124d3a7965ac2b58bbc90ab2d36ef167610deac.html"
+    },
+    {
+      "url": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-04licitaciones.html",
+      "finalUrl": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-04licitaciones.html",
+      "redirects": [],
+      "at": "2026-11-09T12:00:43.852Z",
+      "status": 200,
+      "sha256": "b72a4b8851f498b02cca465e5c491136a7a354f9180b5795ab2a251558a8148a",
+      "file": "b72a4b8851f498b02cca465e5c491136a7a354f9180b5795ab2a251558a8148a.html"
+    },
+    {
+      "url": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-03licitaciones.html",
+      "finalUrl": "https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=2026/2026-11-03licitaciones.html",
+      "redirects": [],
+      "at": "2026-11-09T12:00:43.893Z",
+      "status": 200,
+      "sha256": "066d409354fef1fb02d3a1e5e1d5c766a3d1f5cfeaa4bae11021532b15b10f1a",
+      "file": "066d409354fef1fb02d3a1e5e1d5c766a3d1f5cfeaa4bae11021532b15b10f1a.html"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "P01",
+      "name": "Guantes de nitrilo, caja x100",
+      "terms": [
+        "guantes de nitrilo",
+        "guantes descartables"
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "Gasas estériles, paquete x100",
+      "terms": [
+        "gasas",
+        "compresas de gasa"
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Jeringas descartables 5 ml, caja x100",
+      "terms": [
+        "jeringas",
+        "jeringas descartables"
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Barbijos tricapa, caja x50",
+      "terms": [
+        "barbijos",
+        "mascarillas quirurgicas"
+      ]
+    }
+  ],
+  "coverage": "Tierra del Fuego: hasta dos resultados por familia. Santa Fe: edición más reciente y tres días calendario anteriores. Sin inferir cobertura total.",
+  "modelCalls": 0,
+  "schema": "medpulse.market-monitor.v1",
+  "taskId": "df80e1b6-6a3b-4199-94d0-6713c693794a",
+  "identifier": "MED-25",
+  "runId": "7723f88a-e64d-4af8-86a6-535ff8ba3a15"
+}

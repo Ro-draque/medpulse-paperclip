@@ -1,0 +1,81 @@
+{
+  "objective": "Recibir consultas B2B sobre reposición de insumos de uso habitual",
+  "audience": "Responsables de compras de consultorios y centros ambulatorios",
+  "format": "Publicación vertical de feed · JPEG 1080 × 1350",
+  "headline": "Reponer con tiempo.",
+  "copy": "¿Estás revisando los insumos de tu consultorio? Incluí los barbijos tricapa en tu próxima revisión de reposición. Escribinos para consultar presentación, disponibilidad y cotización.",
+  "cta": "Pedí una cotización",
+  "visual": "Ilustración editorial de un barbijo plegado, con tipografía de alto contraste y una llamada a la acción destacada.",
+  "rationale": "El boletín sirve como contexto para hablar de planificación. No aporta datos de ventas o demanda. El producto pertenece al catálogo de prueba y su disponibilidad comercial real queda por confirmar.",
+  "product": {
+    "id": "P04",
+    "name": "Barbijos tricapa, caja x50",
+    "stockType": "synthetic"
+  },
+  "publication": "review_only",
+  "edition": {
+    "number": 832,
+    "week": 42,
+    "period": "18 al 24 de octubre 2026",
+    "pdf": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf"
+  },
+  "context": {
+    "classification": "contexto_epidemiologico",
+    "signal": "descenso_posinvernal",
+    "interpretation": "El Ministerio describe un descenso de la circulación de virus respiratorios tras los picos invernales.",
+    "demandTrend": "sin evidencia comercial",
+    "reference": "Primer párrafo sobre circulación de virus respiratorios"
+  },
+  "sources": [
+    {
+      "title": "Índice de boletines del Ministerio de Salud",
+      "url": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+      "finalUrl": "https://www.argentina.gob.ar/salud/boletin-epidemiologico-nacional/boletines-2026",
+      "retrievedAt": "2026-11-09T03:15:28.821Z",
+      "sha256": "06375462e660a4134b8958f7ddd62b132a1b92f1f149751713b0cb57a9e61986",
+      "file": "index.html"
+    },
+    {
+      "title": "Resumen oficial de la semana 42",
+      "url": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+      "finalUrl": "https://www.argentina.gob.ar/noticias/actualizacion-del-boletin-epidemiologico-nacional-de-la-semana-ndeg-42",
+      "retrievedAt": "2026-11-09T03:15:30.809Z",
+      "sha256": "a8971bec20f95ad40408399ffe9748e7b719526bebea135915d7b01144dfd875",
+      "file": "summary.html",
+      "attachmentId": "96c4e16d-2e59-464f-8831-aef640a6347f"
+    },
+    {
+      "title": "Boletín Epidemiológico Nacional 832",
+      "url": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+      "finalUrl": "https://www.argentina.gob.ar/sites/default/files/ben-832-se-42-vf_0.pdf",
+      "retrievedAt": "2026-11-09T03:15:31.269Z",
+      "sha256": "54e928ffe7de9f871c6a625e06dc3390d2e86ca4cee546320c5a8385663b322e",
+      "file": "ben.pdf",
+      "attachmentId": "9952b296-931e-4204-b3ca-0ca4673d9e83"
+    }
+  ],
+  "sourceTaskId": "40e730a0-7db1-4f10-901b-f0d908c406d3",
+  "sourceTask": "MED-14",
+  "sourceHash": "136500cdbbf1a233422d37208de1781b534455e58aed30cc63edca51bf54c72f",
+  "campaignKey": "8ee4dc60354022f0f7c1ce5924b1bb1086273208c5563359c250f60015b8a9f2",
+  "image": {
+    "sha256": "24da376e63eef6b27390bdf568e469990450697351b4edbd5b6d2fd9c9628103",
+    "attachmentId": "17b203af-a781-4923-a6bc-d6247a60832b",
+    "width": 1080,
+    "height": 1350
+  },
+  "taskId": "fedaa10e-08e2-48ac-a10c-4ccc08bd8f7d",
+  "identifier": "MED-15",
+  "runId": "463d06bb-abdb-47da-a9e9-c76bbddfe4ec",
+  "schema": "medpulse.instagram.v1",
+  "review": {
+    "status": "in_review",
+    "participant": "human"
+  },
+  "lastResearch": {
+    "identifier": "MED-16",
+    "edition": 832,
+    "reused": true
+  },
+  "exportedAt": "2026-11-09T03:16:46.335Z"
+}
