@@ -1,8 +1,10 @@
 # Decisiones y resultados
 
-**Alcance de la demo.** Elegimos B2 para probar un flujo de recompra con datos sintéticos y evidencia verificable. B3 lo complementa con borradores de Instagram listos para revisión. Paperclip coordina las tareas y conserva su historial.
+**Alcance de la demo.** Elegimos B2, enfocado en oportunidades comerciales y campañas de recompra, como flujo principal. B3 lo complementa con propuestas de contenido para Instagram.
 
 **Ejecución local.** Usamos Codex CLI para que Paperclip pudiera ejecutar trabajo asistido por un modelo en la computadora de la demo. Tras un fallo de enlaces simbólicos en Windows con `codex_local`, usamos el adaptador `process`. Codex CLI es una elección de esta implementación. El diseño de MEDPULSE permite sustituirlo por otros ejecutores.
+
+**Control humano.** Las campañas requieren revisión editorial antes de su cierre. El centro privado registra la identidad del empleado, su decisión y la versión revisada, y confirma el resultado en Paperclip. La aprobación no implica un envío automático.
 
 **Prueba de WhatsApp.** Usamos un sandbox HTTP para comprobar el intercambio entre Paperclip y el adaptador sin enviar mensajes. MED-22 registró cuatro respuestas HTTP y un solo efecto simulado pese a la repetición. Su recibo vincula la ejecución con la revisión de MED-6. [Evidencia de la prueba](docs/WHATSAPP-SANDBOX.md)
 
