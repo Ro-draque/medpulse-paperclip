@@ -126,9 +126,9 @@ Para completar la entrega del desafío queda la grabación del Loom. [Pasos de p
 
 Las pruebas reales de WhatsApp e Instagram son independientes de la entrega. Los adaptadores de prueba quedaron preparados y probados con respuestas simuladas; requieren cuenta, configuración local y autorización específica antes de contactar Meta. [Configurar pruebas oficiales](docs/META-SETUP.md).
 
-### Acceso empleados
+### Acceso para evaluadores
 
-Desde el menú del dashboard público, elegí **Acceso empleados** o abrí el [centro privado en Vercel](https://medpulse-paperclip.vercel.app/centro-privado/). Iniciá sesión con la contraseña individual de tu cuenta demo, entregada por un canal privado. El dashboard público muestra la captura exportada. El centro autenticado consulta los estados de Paperclip.
+Desde el menú del dashboard público, elegí **Acceso empleados** o abrí el [centro privado en Vercel](https://medpulse-paperclip.vercel.app/centro-privado/). Elegí una de las tres cuentas demo de la tabla e iniciá sesión con la contraseña que acompaña la entrega por un canal privado. El dashboard público muestra la captura exportada. El centro autenticado consulta los estados de Paperclip.
 
 | Cuenta | Permisos |
 | --- | --- |
