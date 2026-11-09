@@ -7,7 +7,7 @@ Cuatro agentes reales coordinados en **Paperclip**, con Codex CLI y adaptador `p
 ## Enlaces de entrega
 
 - [Repositorio de entrega en GitHub](https://github.com/Ro-draque/medpulse-paperclip).
-- Vercel: configuración y build preparados; publicación pendiente de acceso a la cuenta.
+- [Dashboard público de MEDPULSE en Vercel](https://medpulse-paperclip.vercel.app/), con capturas de solo lectura.
 - Loom: [guion de 2:20](docs/LOOM-SCRIPT.md); grabación y enlace pendientes.
 - [Research, máximo una página MD](docs/RESEARCH.md) · [DECISIONS, media página](DECISIONS.md).
 
@@ -121,7 +121,7 @@ Publicar solo los archivos de release-files.json. Quedan fuera la base, credenci
 
 En Vercel: importar el repositorio, usar raíz del proyecto y framework **Other**. vercel.json define buildCommand y outputDirectory=dist/dashboard. No instalar Paperclip en Vercel ni configurar claves del proveedor. El dashboard funciona con la evidencia exportada incluida. La actualización requiere exportar y desplegar una nueva versión.
 
-Para completar la entrega del desafío quedan el despliegue en Vercel y la grabación del Loom. [Pasos de publicación y comprobación](docs/DELIVERY.md)
+Para completar la entrega del desafío queda la grabación del Loom. [Pasos de publicación y comprobación](docs/DELIVERY.md)
 
 Las pruebas reales de WhatsApp e Instagram son independientes de la entrega. Los adaptadores de prueba quedaron preparados y probados con respuestas simuladas; requieren cuenta, configuración local y autorización específica antes de contactar Meta. [Configurar pruebas oficiales](docs/META-SETUP.md).
 
