@@ -11,6 +11,11 @@ const current=await api('/api/issues/'+task.id);
 if([current.executionRunId,current.checkoutRunId].some(id=>id&&id!==runId))throw Error('Another run owns the task');
 if(current.executionRunId!==runId&&current.checkoutRunId!==runId)await api(`/api/issues/${task.id}/checkout`,'POST',{agentId,expectedStatuses:['todo','in_progress']});
 const source=await api(`/api/issues/${meta.sourceTaskId}`),doc=await api(`/api/issues/${meta.sourceTaskId}/documents/result`),campaign=unwrapDocument(doc);
+const loomCompany=process.env.MEDPULSE_LOOM_COMPANY;
+if((loomCompany||meta.loom)&&(!loomCompany||me.companyId!==loomCompany||source.companyId!==loomCompany||
+  meta.transport!=='local_http_sandbox'||source.status!=='done'||source.executionState?.lastDecisionOutcome!=='approved'||
+  source.executionState.lastDecisionId!==meta.loom?.decisionId||doc.latestRevisionId!==meta.loom?.revision))
+  throw Error('Loom sandbox requires the approved rehearsal revision in its isolated company');
 if(campaign.mode!=='dry_run'||campaign.messages_sent!==0||campaign.payload?.sendable!==false||campaign.recipient.phone!==null||campaign.payload.request_draft.to!=='<FICTIONAL_RECIPIENT_NOT_SENDABLE>')throw Error('Only fictional non-sendable dry runs accepted');
 const request=campaign.payload.request_draft;
 if(request.messaging_product!=='whatsapp'||request.type!=='text'||!request.text.body||request.text.body!==campaign.message)throw Error('Payload does not match reviewed draft');
@@ -19,6 +24,7 @@ const receipt={schema:'medpulse.whatsapp-dry-run-receipt.v1',receiptId:`dry-run:
 const dir=path.join('evidence/growth',meta.batch,'handoff',runId);await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'receipt.json'),JSON.stringify(receipt,null,2));
 const sandbox=meta.transport==='local_http_sandbox';
 if(sandbox){
+ if(loomCompany)receipt.loomDecisionId=meta.loom.decisionId;
  const {runSandboxCases}=await import('./whatsapp-http-sandbox.mjs');
  receipt.http=await runSandboxCases(request,doc.latestRevisionId,path.join('evidence','whatsapp-http-sandbox','ledger'));
  receipt.outcome='local_http_sandbox_validated_not_sent';
@@ -31,5 +37,5 @@ const form=new FormData();form.append('file',new Blob([JSON.stringify(receipt,nu
 const upload=await fetch(`${base}/api/companies/${me.companyId}/issues/${task.id}/attachments`,{method:'POST',headers,body:form});if(!upload.ok)throw Error(`Receipt attachment ${upload.status}`);
 await api(`/api/issues/${task.id}/comments`,'POST',{body:`Handoff ejecutado desde ${source.identifier}. ${sandbox?'Sandbox HTTP local: cuatro solicitudes y respuesta con ID simulado.':'Validación local del payload.'} Recibo ${receipt.receiptId}, run ${runId}, revisión fuente ${doc.latestRevisionId}. Cero llamadas a Meta y cero envíos.`});
 await api(`/api/issues/${task.id}`,'PATCH',{status:'done'});
-await fs.writeFile(sandbox?'evidence/latest-http-handoff.json':'evidence/latest-handoff.json',JSON.stringify({batch:meta.batch,taskId:task.id,runId,directory:dir},null,2));
+if(!loomCompany)await fs.writeFile(sandbox?'evidence/latest-http-handoff.json':'evidence/latest-handoff.json',JSON.stringify({batch:meta.batch,taskId:task.id,runId,directory:dir},null,2));
 console.log(JSON.stringify(receipt));

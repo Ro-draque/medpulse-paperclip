@@ -18,7 +18,7 @@ En la ejecución del 9 de noviembre de 2026, MED-23 registró aprobación de Val
 ## Límites
 
 - Las contraseñas se verifican mediante scrypt con sal individual. SQLite guarda los hashes, los límites de intentos, las sesiones y la auditoría fuera del repositorio. El archivo privado de entrega contiene las contraseñas demo para que la operadora pueda consultarlas. Las tres cuentas tienen permiso de revisión.
-- El puerto 4174 escucha exclusivamente en loopback. El sitio público de Vercel sigue construyendo únicamente `dist/dashboard`. No usa estas sesiones ni tiene conectividad con Paperclip.
+- El puerto 4174 escucha exclusivamente en loopback. El centro de Vercel usa sesiones separadas y una función que se comunica con el centro anfitrión por un túnel autenticado. Las decisiones remotas se limitan a los ensayos. La base y las credenciales permanecen en el anfitrión. [Acceso desde Vercel](../README.md#acceso-empleados)
 - Paperclip registra como `local-board`. La identidad demo se verifica y registra en MEDPULSE. La API local de Paperclip en modo confiable sigue siendo accesible para otros procesos con acceso a la máquina.
 - La API de decisión de Paperclip carece de una precondición atómica por revisión. El centro serializa sus propias operaciones, verifica la versión antes y después y bloquea resultados ambiguos. Si alguien edita o decide directamente en Paperclip durante la operación, podría existir una decisión en Paperclip que MEDPULSE marque como conflicto. Evitá operar desde ambas interfaces a la vez.
 - El centro no invoca adaptadores de WhatsApp ni Instagram. La configuración de los adaptadores y las evidencias existentes se conservan.

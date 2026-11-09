@@ -12,8 +12,8 @@ export const sha = value => createHash('sha256').update(value).digest('hex');
 const passwordHash = (password, salt) => scryptSync(password, salt, 64, {N:32768,r:8,p:1,maxmem:64*1024*1024});
 const token = () => randomBytes(32).toString('base64url');
 export const problem = (status, message) => Object.assign(new Error(message), {status});
-export const paperclip = async (route, method='GET', body) => {
-  const response = await fetch('http://127.0.0.1:3100'+route, {
+export const paperclipAt = port => async (route, method='GET', body) => {
+  const response = await fetch('http://127.0.0.1:'+port+route, {
     method, redirect:'error', signal:AbortSignal.timeout(8000),
     ...(body && {headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)}),
   });
@@ -21,6 +21,7 @@ export const paperclip = async (route, method='GET', body) => {
   if (route.endsWith('/content')) return Buffer.from(await response.arrayBuffer());
   return response.json();
 };
+export const paperclip=paperclipAt(3100);
 
 export function openStore(file) {
   const db = new DatabaseSync(file);
@@ -29,7 +30,9 @@ export function openStore(file) {
     CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, salt TEXT, hash TEXT);
     CREATE TABLE IF NOT EXISTS sessions (hash TEXT PRIMARY KEY, user TEXT, expires INTEGER);
     CREATE TABLE IF NOT EXISTS attempts (id INTEGER PRIMARY KEY, at INTEGER);
+    CREATE TABLE IF NOT EXISTS remote_attempts (id INTEGER PRIMARY KEY, at INTEGER);
     CREATE TABLE IF NOT EXISTS demos (id TEXT PRIMARY KEY);
+    CREATE TABLE IF NOT EXISTS loom_rehearsals (id TEXT PRIMARY KEY, request TEXT UNIQUE NOT NULL, company TEXT NOT NULL, task TEXT NOT NULL, simulation TEXT);
     CREATE TABLE IF NOT EXISTS decisions (
       id TEXT PRIMARY KEY, task TEXT, revision TEXT, hash TEXT, employee TEXT, role TEXT,
       at TEXT, action TEXT, comment TEXT, previous TEXT, stage TEXT, phase TEXT, paperclipId TEXT, paperclipStatus TEXT,
@@ -51,35 +54,37 @@ export function provision(db) {
   return list.map(({id,name,password}) => ({id,name,password}));
 }
 
-export function auth(db) {
+export function auth(db, remote=false) {
+  const attempts=remote?'remote_attempts':'attempts';
+  const sessionHash=value=>sha(remote?'remote:'+value:value);
   return {
     login(id, password, now=Date.now()) {
-      db.prepare('DELETE FROM attempts WHERE at<=?').run(now-600_000);
-      if (db.prepare('SELECT count(*) AS n FROM attempts').get().n>=10) throw problem(429,'Demasiados intentos. Esperá 10 minutos.');
+      db.prepare('DELETE FROM '+attempts+' WHERE at<=?').run(now-600_000);
+      if (db.prepare('SELECT count(*) AS n FROM '+attempts).get().n>=10) throw problem(429,'Demasiados intentos. Esperá 10 minutos.');
       const row=db.prepare('SELECT * FROM users WHERE id=?').get(id);
       const actual=passwordHash(password,row?.salt??'medpulse-invalid');
       if (!row || !timingSafeEqual(actual,Buffer.from(row.hash,'hex'))) {
-        db.prepare('INSERT INTO attempts(at) VALUES (?)').run(now);
+        db.prepare('INSERT INTO '+attempts+'(at) VALUES (?)').run(now);
         throw problem(401,'Usuario o contraseña incorrectos.');
       }
       db.prepare('DELETE FROM sessions WHERE expires<=?').run(now);
       const value=token();
-      db.prepare('INSERT INTO sessions VALUES (?,?,?)').run(sha(value),id,now+28_800_000);
+      db.prepare('INSERT INTO sessions VALUES (?,?,?)').run(sessionHash(value),id,now+28_800_000);
       return value;
     },
     user(value) {
       if (!value) return null;
-      const session=db.prepare('SELECT user FROM sessions WHERE hash=? AND expires>?').get(sha(value),Date.now());
+      const session=db.prepare('SELECT user FROM sessions WHERE hash=? AND expires>?').get(sessionHash(value),Date.now());
       return employees.find(employee=>employee.id===session?.user)??null;
     },
-    logout(value) { if (value) db.prepare('DELETE FROM sessions WHERE hash=?').run(sha(value)); },
+    logout(value) { if (value) db.prepare('DELETE FROM sessions WHERE hash=?').run(sessionHash(value)); },
   };
 }
 
 export function approvals(db, api=paperclip) {
   const active = new Set();
   const route = id=>'/api/issues/'+encodeURIComponent(id);
-  const allowed = id=>originals.includes(id)||!!db.prepare('SELECT 1 FROM demos WHERE id=?').get(id);
+  const allowed = id=>originals.includes(id)||!!db.prepare('SELECT 1 FROM demos WHERE id=? UNION ALL SELECT 1 FROM loom_rehearsals WHERE id=?').get(id,id);
   const check = id=>{if (!allowed(id)) throw problem(404,'Campaña fuera del centro de revisión.');};
   const image = async draft=>{
     const attachment = draft.image;
@@ -91,7 +96,8 @@ export function approvals(db, api=paperclip) {
   };
   async function read(id) {
     check(id);
-    const task=await api(route(id));
+    const rehearsal=db.prepare('SELECT task FROM loom_rehearsals WHERE id=?').get(id);
+    const task=await api(route(rehearsal?.task??id));
     const doc=await api(route(task.id)+'/documents/result');
     const draft=unwrapDocument(doc);
     const bytes=await image(draft);

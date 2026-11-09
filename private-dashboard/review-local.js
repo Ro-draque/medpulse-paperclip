@@ -120,7 +120,103 @@ function display(parent,card){
   },null,2)));
   section.append(details);
   appendDecisionActions(section,parent,card);
+  if(card.rehearsal)appendLoomSimulation(section,card);
   parent.append(section);
+}
+function paperclipLink(text,url){
+  const link=element('a',text);
+  link.href=url;link.target='_blank';link.rel='noopener noreferrer';
+  return link;
+}
+function appendLoomSimulation(section,card){
+  const area=element('div');
+  const route='campaigns/'+card.id+'/simulation';
+  section.append(area);
+  async function load(start=false){
+    area.replaceChildren();
+    const message=paragraph(area,start?'Paperclip está preparando la simulación…':'Consultando evidencia en Paperclip…');
+    message.setAttribute('role','status');
+    try{
+      let state=await api(route,start?{}:undefined);
+      if(start)for(let attempt=0;attempt<20&&state.simulation&&!state.simulation.receipt&&area.isConnected;attempt++){
+        await new Promise(resolve=>setTimeout(resolve,750));
+        state=await api(route);
+      }
+      area.replaceChildren(paperclipLink('Abrir borrador en Paperclip',state.sourceUrl));
+      if(state.simulation){
+        const {id,url,receipt}=state.simulation;
+        paragraph(area,'Tarea de simulación '+id);
+        area.append(paperclipLink('Abrir simulación en Paperclip',url));
+        if(receipt){
+          const details=element('details');
+          details.append(element('summary','Ver recibo de simulación'));
+          const success=receipt.http.cases.find(entry=>entry.name==='success');
+          paragraph(details,success.request.body.text.body).className='private-copy';
+          paragraph(details,'HTTP 200 · Sandbox local · Cero mensajes reales y cero llamadas a Meta.');
+          paragraph(details,'Identificador simulado: '+receipt.http.simulatedMessageId);
+          paragraph(details,'Recibo: '+receipt.receiptId+' · '+format(receipt.executedAt));
+          paragraph(details,'Revisión: '+receipt.sourceDocumentRevisionId+' · Decisión en Paperclip: '+receipt.loomDecisionId);
+          area.append(details);
+          return;
+        }
+        paragraph(area,'Todavía no hay un recibo confirmado. Consultá el estado. Si Paperclip muestra una ejecución fallida, abrí la misma tarea para revisar el error antes de reintentar.');
+      }else if(!state.canSimulate){
+        paragraph(area,'La simulación se habilita cuando Paperclip confirma la aprobación de esta versión.');
+        return;
+      }
+      if(state.canSimulate&&(!state.simulation||state.simulation.status==='backlog'))
+        area.append(button(state.simulation?'Recuperar simulación':'Ejecutar simulación HTTP',()=>load(true)));
+      if(state.simulation)area.append(button('Consultar estado',()=>load()));
+    }catch(error){
+      message.textContent='No se pudo confirmar la simulación. '+error.message;
+      area.append(button('Consultar estado',()=>load()));
+    }
+  }
+  void load();
+}
+function appendLoom(rehearsals){
+  const section=element('section');
+  const cards=element('div');
+  const result=paragraph(section,'Elegí un ensayo anterior o prepará una toma nueva.');
+  const select=element('select');
+  const placeholder=element('option','Elegir un ensayo');
+  placeholder.value='';
+  select.append(placeholder);
+  const field=element('label','Ensayos guardados');
+  field.append(select);
+  const add=id=>{const option=element('option',id);option.value=id;select.append(option);};
+  rehearsals.forEach(add);
+  async function show(id){
+    cards.replaceChildren();
+    if(!id)return;
+    try{
+      const card=await api('campaigns/'+id);
+      if(select.value===id)display(cards,card);
+    }catch(error){result.textContent=error.message;}
+  }
+  select.addEventListener('change',()=>show(select.value));
+  const keyName='medpulse-loom-pending';
+  const create=button(sessionStorage.getItem(keyName)?'Recuperar nuevo ensayo':'Nuevo ensayo',async()=>{
+    create.disabled=true;
+    result.textContent='Preparando borrador en Paperclip…';
+    const key=sessionStorage.getItem(keyName)??crypto.randomUUID();
+    sessionStorage.setItem(keyName,key);
+    try{
+      const {id}=await api('loom',{key});
+      sessionStorage.removeItem(keyName);
+      if(![...select.options].some(option=>option.value===id))add(id);
+      select.value=id;
+      result.textContent=id+' · Ensayo listo para revisar.';
+      await show(id);
+    }catch(error){result.textContent='No se pudo confirmar el nuevo ensayo. '+error.message;}
+    finally{
+      create.textContent=sessionStorage.getItem(keyName)?'Recuperar nuevo ensayo':'Nuevo ensayo';
+      create.disabled=false;
+    }
+  });
+  section.prepend(element('h2','Ensayos para el Loom'),create,field);
+  section.append(cards);
+  content.append(section);
 }
 function appendCampaignHistory(section,card){
   const historyLink=element('a','Ver historial de decisiones');
@@ -230,20 +326,25 @@ function appendApprovalHistory(){
   void refreshHistory();
 }
 async function session(){
-  const {user,ids,canViewHistory}=await api('session');
+  const {user,ids,canViewHistory,rehearsals,remote}=await api('session');
   notice.textContent='';
   content.replaceChildren();
   paragraph(content,user.name+' · '+user.role+' · Paperclip registra como local-board.');
+  if(remote)paragraph(content,'Las campañas originales se pueden consultar. Usá las campañas de demostración para registrar una nueva decisión.');
   content.append(button('Cerrar sesión',async()=>{
     try{await api('logout',{});notice.textContent='Sesión cerrada.';login();}
     catch(error){notice.textContent=error.message;}
   }));
   if(canViewHistory){
-    appendDemoSpreadsheets();
+    if(!remote){
+      appendLoom(rehearsals);
+      appendDemoSpreadsheets();
+    }
     appendApprovalHistory();
-    if(location.hash==='#datos-demo')document.querySelector('#datos-demo').scrollIntoView();
+    if(location.hash==='#datos-demo')document.querySelector('#datos-demo')?.scrollIntoView();
   }else{
-    paragraph(content,'Para cargar planillas o consultar quién aprobó una campaña, cerrá sesión e ingresá como Sofía Demo (Gerencia).');
+    paragraph(content,remote?'El historial completo está disponible para Gerencia.':
+      'Para cargar planillas o consultar quién aprobó una campaña, cerrá sesión e ingresá como Sofía Demo (Gerencia).');
   }
   const grid=element('div');grid.className='private-cards';
   content.append(grid);

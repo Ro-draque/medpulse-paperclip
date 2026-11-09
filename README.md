@@ -8,6 +8,7 @@ Cuatro agentes reales coordinados en **Paperclip**, con Codex CLI y adaptador `p
 
 - [Repositorio de entrega en GitHub](https://github.com/Ro-draque/medpulse-paperclip).
 - [Dashboard público de MEDPULSE en Vercel](https://medpulse-paperclip.vercel.app/), con capturas de solo lectura.
+- [Acceso empleados en Vercel](https://medpulse-paperclip.vercel.app/centro-privado/), con inicio de sesión y revisión de borradores de ensayo.
 - Loom: [guion de 2:20](docs/LOOM-SCRIPT.md); grabación y enlace pendientes.
 - [Research, máximo una página MD](docs/RESEARCH.md) · [DECISIONS, media página](DECISIONS.md).
 
@@ -125,9 +126,19 @@ Para completar la entrega del desafío queda la grabación del Loom. [Pasos de p
 
 Las pruebas reales de WhatsApp e Instagram son independientes de la entrega. Los adaptadores de prueba quedaron preparados y probados con respuestas simuladas; requieren cuenta, configuración local y autorización específica antes de contactar Meta. [Configurar pruebas oficiales](docs/META-SETUP.md).
 
-### Revisión privada local
+### Acceso empleados
 
-El [centro privado de aprobaciones](docs/APPROVALS.md) funciona únicamente en el equipo donde corre Paperclip. La versión estática de Vercel conserva la vista de auditoría de solo lectura.
+Desde el menú del dashboard público, elegí **Acceso empleados** o abrí el [centro privado en Vercel](https://medpulse-paperclip.vercel.app/centro-privado/). Iniciá sesión con la contraseña individual de tu cuenta demo, entregada por un canal privado. El dashboard público muestra la captura exportada. El centro autenticado consulta los estados de Paperclip.
+
+| Cuenta | Permisos |
+| --- | --- |
+| Valentina Demo (`valentina`), Comercial | Consultar las campañas y aprobar o solicitar cambios en borradores de ensayo. |
+| Martín Demo (`martin`), Marketing | Consultar las campañas y aprobar o solicitar cambios en borradores de ensayo. |
+| Sofía Demo (`sofia`), Gerencia | Revisar borradores de ensayo y consultar el historial completo. La carga de planillas y la creación de nuevos ensayos están disponibles en el centro local. |
+
+Desde Vercel las campañas originales se consultan en modo lectura. Las decisiones sobre ensayos se confirman en Paperclip y quedan auditadas con la cuenta, la fecha y la revisión del borrador. Son decisiones editoriales, sin envíos de WhatsApp ni publicaciones en Instagram.
+
+El acceso remoto necesita que la computadora anfitriona esté encendida y conectada, con Paperclip, el centro privado y el túnel autenticado de ngrok activos. Vercel reenvía las solicitudes autorizadas a ese centro mediante una función del servidor. Si la computadora o sus servicios se detienen, el dashboard público conserva su captura y el centro remoto queda temporalmente indisponible. [Operación del centro local](docs/APPROVALS.md)
 
 ### Planillas de demostración
 

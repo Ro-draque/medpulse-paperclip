@@ -14,11 +14,13 @@ function detail(title,summary,evidence){
  $('#detail').showModal();
 }
 $('#close-detail').addEventListener('click',()=>$('#detail').close());
-if(location.hostname==='127.0.0.1'&&location.port==='4173'){
- const approvals=node('a','Ingresar para revisar y autorizar','button primary');
- approvals.href='http://127.0.0.1:4174/#review';
- $('#review .panel-heading').after(approvals);
-}
+const approvals=node('a','Acceso empleados','button primary');
+approvals.href=location.hostname==='127.0.0.1'&&location.port==='4173'
+ ? 'http://127.0.0.1:4174/#review' : '/centro-privado/';
+$('#review .panel-heading').after(approvals);
+const employeeNav=node('a','Acceso empleados');
+employeeNav.href=approvals.href;
+$('nav').append(employeeNav);
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active');}));
 fetch('data/paperclip.json').then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(async data=>{
  if(data.schema!=='medpulse.public-evidence.v1')throw Error('Formato de evidencia incompatible');
